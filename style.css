@@ -5146,77 +5146,64 @@ footer{
 }
 
 /* =========================================================
-   FINAL MOBILE POLISH
+   HOME PAGE — FINAL MOBILE FIX
    ========================================================= */
 
-@media (max-width: 700px){
+@media (max-width:700px){
 
-    /* Prevent accidental horizontal overflow */
+    /* STOP ALL HORIZONTAL OVERFLOW */
     html,
     body{
         width:100%;
         max-width:100%;
-        overflow-x:hidden;
+        overflow-x:hidden !important;
     }
 
-    /* Better mobile section spacing */
-    .section{
-        padding-left:6%;
-        padding-right:6%;
-    }
-
-    /* NAVBAR */
-    .navbar{
-        height:68px;
-        padding:0 5%;
-    }
-
-    .brand{
-        min-width:0;
-    }
-
-    .brand strong{
-        font-size:15px;
-        letter-spacing:1px;
-    }
-
-    .brand small{
-        font-size:5.5px;
-    }
-
-    .brand-mark{
-        width:34px;
-        height:34px;
-        flex-shrink:0;
-    }
-
-    /* HERO */
     .hero{
-        min-height:100svh;
-        padding-top:110px;
-        padding-bottom:75px;
-        padding-left:5%;
-        padding-right:5%;
-        overflow:hidden;
-    }
-
-    .hero-copy{
         width:100%;
         max-width:100%;
+        min-width:0;
+        min-height:100svh;
+
+        padding:120px 6% 75px !important;
+
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:flex-start !important;
+        justify-content:center !important;
+
+        position:relative;
+        overflow:hidden !important;
     }
 
-    .hero h1{
-        font-size:clamp(52px,16vw,82px);
-        line-height:.94;
-        letter-spacing:2px;
+    /* TEXT */
+    .hero-copy{
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        position:relative;
+        z-index:5;
     }
 
-    .hero h2{
-        font-size:clamp(18px,5vw,25px);
+    .hero-copy h1{
+        max-width:100%;
+        font-size:clamp(52px,16vw,78px) !important;
+        line-height:.95 !important;
+        letter-spacing:2px !important;
+        word-break:normal;
+    }
+
+    .hero-copy h2{
+        max-width:100%;
+        font-size:clamp(18px,5vw,25px) !important;
         line-height:1.25;
     }
 
     .hero-meta{
+        width:100%;
+        max-width:100%;
+        display:flex;
         flex-wrap:wrap;
         gap:10px 18px;
         margin:22px 0;
@@ -5224,189 +5211,122 @@ footer{
 
     .hero-actions{
         width:100%;
+        max-width:100%;
+        display:flex;
         flex-wrap:wrap;
         gap:10px;
     }
 
     .hero-actions .btn{
+        max-width:100%;
         min-height:46px;
-        padding:13px 18px;
     }
 
-    /* HERO IMAGE — if used */
-    .hero-image{
-        width:min(500px,120vw);
-        height:min(500px,120vw);
-        right:-25%;
-        top:58%;
-        opacity:.65;
+
+    /* SAVE DATE — RESET THE DESKTOP POSITION */
+    .save-date-card{
+        position:relative !important;
+        top:auto !important;
+        right:auto !important;
+        left:auto !important;
+        bottom:auto !important;
+
+        transform:none !important;
+
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:25px 0 0 !important;
     }
 
-    /* Keep hero content above decorative elements */
-    .hero-copy,
-    .hero-meta,
-    .hero-actions,
+
+    /* SAMUN EMBLEM */
     .hero-emblem{
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+
+        margin:35px 0 0 !important;
+
         position:relative;
-        z-index:3;
+        z-index:5;
     }
 
-    /* HERO GLOW */
-    .hero::before{
-        width:380px;
-        height:380px;
-        left:-220px;
-        opacity:.8;
+    .hero-emblem img{
+        width:min(230px,58vw) !important;
+        max-width:100% !important;
+        height:auto !important;
+
+        transform:none !important;
+
+        border-radius:0 !important;
+
+        box-shadow:none !important;
+
+        filter:none !important;
     }
 
+
+    /* REMOVE THE OLD DECORATIVE HERO IMAGE */
+    .hero-image{
+        display:none !important;
+    }
+
+
+    /* REMOVE ORBITS ON PHONE */
+    .hero-orbit{
+        display:none !important;
+    }
+
+
+    /* REMOVE THE BIG GOLD ORBIT */
     .hero::after{
-        width:520px;
-        height:520px;
-        right:-260px;
-        opacity:.7;
+        display:none !important;
     }
 
-    /* PAGE HEADINGS */
-    .page-hero{
-        min-height:350px;
-        padding-top:120px;
-        padding-bottom:65px;
+
+    /* KEEP ONLY A VERY SUBTLE CRIMSON GLOW */
+    .hero::before{
+        display:block;
+        width:320px;
+        height:320px;
+
+        left:-220px;
+        top:45%;
+
+        transform:translateY(-50%);
+
+        opacity:.65;
+        filter:blur(55px);
+
+        pointer-events:none;
+        z-index:0;
     }
 
-    .page-hero h1{
-        font-size:clamp(38px,11vw,58px);
-        line-height:1;
-    }
 
-    .section-heading h2{
-        font-size:clamp(30px,9vw,46px);
-        line-height:1.1;
-    }
-
-    .section-heading p{
-        font-size:13px;
-        line-height:1.7;
-    }
-
-    /* BUTTONS / LINKS */
-    .btn,
-    .contact-submit,
-    .gallery-button,
-    .contact-cta-button{
-        min-height:46px;
-    }
-
-    /* GRIDS */
-    .feature-grid,
-    .values-grid,
-    .committee-grid,
-    .committee-grid-large,
-    .secretariat-grid{
-        grid-template-columns:1fr;
+    /* SOCIALS — KEEP THEM INSIDE THE SCREEN */
+    .hero .contact-socials{
         width:100%;
+        max-width:100%;
+        overflow:hidden;
     }
 
-    /* ABOUT */
-    .split-section{
-        grid-template-columns:1fr;
-        gap:40px;
-        padding-top:80px;
-        padding-bottom:80px;
+    .hero .contact-socials > div{
+        display:flex;
+        flex-wrap:nowrap;
+        gap:10px;
     }
 
-    .about-art{
-        order:-1;
-        justify-content:center;
-    }
 
-    .about-image-frame{
-        width:min(430px,100%);
-        height:460px;
-    }
-
-    /* COUNTDOWN */
-    #countdown{
-        grid-template-columns:repeat(2,1fr);
-        gap:14px;
-    }
-
-    /* COMMITTEES */
-    .committee-card{
-        min-height:340px;
-    }
-
-    .committee-card .committee-logo{
-        width:140px!important;
-        height:140px!important;
-        min-width:140px!important;
-        min-height:140px!important;
-        max-width:140px!important;
-        max-height:140px!important;
-    }
-
-    /* REGISTER */
-    .register-option{
-        width:100%;
-    }
-
-    .register-image{
-        width:80px;
-        height:80px;
-        min-width:80px;
-        border-radius:50%;
-    }
-
-    .register-image img{
-        width:100%;
-        height:100%;
-        object-fit:cover;
-    }
-
-    /* CONTACT */
-    .contact-main-section{
-        padding-left:6%;
-        padding-right:6%;
-    }
-
-    .contact-container{
-        grid-template-columns:1fr;
-        gap:50px;
-    }
-
-    .contact-form-wrapper{
-        width:100%;
-        padding:28px 20px;
-    }
-
-    .form-row{
-        grid-template-columns:1fr;
-        gap:20px;
-    }
-
-    .contact-form-new input,
-    .contact-form-new select,
-    .contact-form-new textarea{
-        font-size:16px;
-    }
-
-    .contact-submit{
-        width:100%;
-    }
-
-    /* SOCIAL ICONS */
-    .contact-socials{
-        gap:12px;
-    }
-
-    .contact-socials a{
-        width:44px;
-        height:44px;
-    }
-
-    /* FOOTER */
-    footer{
-        padding-left:6%;
-        padding-right:6%;
+    /* SCROLL CUE */
+    .scroll-cue{
+        left:6% !important;
+        bottom:20px !important;
+        max-width:88%;
     }
 }
 
@@ -5414,391 +5334,20 @@ footer{
 /* SMALL PHONES */
 @media (max-width:400px){
 
-    .navbar{
-        padding:0 4%;
-    }
-
-    .brand strong{
-        font-size:14px;
-    }
-
-    .section{
-        padding-left:5%;
-        padding-right:5%;
-    }
-
     .hero{
-        padding-left:5%;
-        padding-right:5%;
+        padding-left:5% !important;
+        padding-right:5% !important;
     }
 
-    .hero h1{
-        font-size:clamp(50px,16vw,70px);
-    }
-
-    .hero-image{
-        width:420px;
-        height:420px;
-        right:-42%;
-        top:60%;
-    }
-
-    .feature-card{
-        padding:23px 20px;
-    }
-
-    .committee-card{
-        padding:23px 20px;
-    }
-
-    .committee-card .committee-logo{
-        width:130px!important;
-        height:130px!important;
-        min-width:130px!important;
-        min-height:130px!important;
-        max-width:130px!important;
-        max-height:130px!important;
-    }
-
-    .register-image{
-        width:70px;
-        height:70px;
-        min-width:70px;
-    }
-
-    .contact-form-wrapper{
-        padding:24px 17px;
-    }
-
-    .contact-main-section{
-        padding-left:5%;
-        padding-right:5%;
-    }
-}
-
-@media (max-width:700px){
-
-    footer{
-        padding:28px 5%;
-    }
-
-    footer > div{
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        gap:12px;
-        flex-wrap:nowrap;
-    }
-
-    footer p{
-        margin:0;
-        font-size:8px;
-        line-height:1.4;
-        white-space:nowrap;
-    }
-
-    footer a{
-        font-size:8px;
-        white-space:nowrap;
-    }
-
-    footer .footer-links{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        gap:12px;
-        flex-wrap:nowrap;
-        white-space:nowrap;
-    }
-
-    footer .footer-socials{
-        display:flex;
-        align-items:center;
-        justify-content:flex-end;
-        gap:8px;
-        flex-shrink:0;
-    }
-
-    footer .footer-socials a{
-        width:34px;
-        height:34px;
-        flex-shrink:0;
-    }
-}
-
-@media (max-width:400px){
-
-    footer{
-        padding:24px 4%;
-    }
-
-    footer p,
-    footer a{
-        font-size:7px;
-    }
-
-    footer .footer-links{
-        gap:8px;
-    }
-
-    footer .footer-socials{
-        gap:6px;
-    }
-
-    footer .footer-socials a{
-        width:30px;
-        height:30px;
-    }
-}
-
-/* =========================================================
-   FINAL HOME MOBILE CLEANUP
-   ========================================================= */
-
-@media (max-width:700px){
-
-    /* ---------- HOME HERO ---------- */
-
-    .hero{
-        min-height:100svh;
-        padding-top:105px;
-        padding-bottom:75px;
-        padding-left:6%;
-        padding-right:6%;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        overflow:hidden;
-    }
-
-    /* Keep only the text + SAMUN emblem */
-    .hero-copy{
-        position:relative;
-        z-index:5;
-        width:100%;
-        max-width:100%;
-    }
-
-    .hero-emblem{
-        position:relative;
-        z-index:5;
-        width:100%;
-        display:flex;
-        justify-content:center;
-        margin-top:35px;
+    .hero-copy h1{
+        font-size:clamp(48px,15.5vw,68px) !important;
     }
 
     .hero-emblem img{
-        width:min(230px,58vw);
-        height:auto;
-        object-fit:contain;
-        transform:none !important;
-        filter:none;
-        box-shadow:none;
+        width:min(200px,55vw) !important;
     }
 
-    /* Hide the large decorative hero image */
-    .hero-image{
-        display:none !important;
-    }
-
-    /* Hide decorative orbit elements */
-    .hero-orbit{
-        display:none !important;
-    }
-
-    /* Keep subtle crimson atmosphere only */
-    .hero::before{
-        width:330px;
-        height:330px;
-        left:-220px;
-        top:50%;
-        opacity:.7;
-        filter:blur(50px);
-    }
-
-    /* Remove large golden orbit on phone */
-    .hero::after{
-        display:none;
-    }
-
-    /* Hero typography */
-    .hero h1{
-        font-size:clamp(54px,16vw,82px);
-        line-height:.94;
-        letter-spacing:2px;
-    }
-
-    .hero h2{
-        font-size:clamp(18px,5vw,25px);
-        line-height:1.25;
-    }
-
-    .hero-meta{
-        flex-wrap:wrap;
-        gap:10px 18px;
-        margin:22px 0;
-    }
-
-    .hero-actions{
-        width:100%;
-        display:flex;
-        flex-wrap:wrap;
-        gap:10px;
-    }
-
-
-    /* ---------- HOME SECTION IMAGES ---------- */
-
-    .home-intro img,
-    .welcome-section img,
-    .feature-card img,
-    .register-section img{
-        display:none !important;
-    }
-
-
-    /* ---------- HOME FEATURE CARDS ---------- */
-
-    .feature-grid{
-        grid-template-columns:1fr;
-        gap:15px;
-    }
-
-    .feature-card{
-        padding:25px 22px;
-    }
-
-
-    /* ---------- WELCOME SECTION ---------- */
-
-    .welcome-section{
-        padding:75px 7%;
-    }
-
-    .welcome-content{
-        grid-template-columns:3px 1fr;
-        gap:20px;
-    }
-
-    .welcome-text p{
-        font-size:14px;
-        line-height:1.8;
-    }
-
-
-    /* ---------- FOOTER: 2 × 2 GRID ---------- */
-
-    footer{
-        padding:32px 6% 24px;
-    }
-
-    footer .footer-inner{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        grid-template-rows:auto auto;
-        align-items:center;
-        justify-items:center;
-        gap:22px 15px;
-        width:100%;
-    }
-
-    footer .footer-brand{
-        grid-column:1;
-        grid-row:1;
-        justify-self:start;
-    }
-
-    footer .footer-links{
-        grid-column:2;
-        grid-row:1;
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:flex-end;
-        gap:8px 12px;
-        text-align:right;
-    }
-
-    footer .footer-socials{
-        grid-column:1;
-        grid-row:2;
-        justify-self:start;
-        display:flex;
-        align-items:center;
-        gap:8px;
-    }
-
-    footer .footer-bottom{
-        grid-column:2;
-        grid-row:2;
-        margin:0;
-        padding:0;
-        border:0;
-        display:flex;
-        flex-direction:column;
-        align-items:flex-end;
-        text-align:right;
-        gap:4px;
-    }
-
-    footer .footer-socials a{
-        width:36px;
-        height:36px;
-        flex-shrink:0;
-    }
-
-    footer p,
-    footer span,
-    footer a{
-        white-space:nowrap;
-    }
-}
-
-
-/* =========================================================
-   SMALL PHONES
-   ========================================================= */
-
-@media (max-width:400px){
-
-    .hero{
-        padding-left:5%;
-        padding-right:5%;
-    }
-
-    .hero h1{
-        font-size:clamp(50px,16vw,70px);
-    }
-
-    .hero-emblem{
-        margin-top:28px;
-    }
-
-    .hero-emblem img{
-        width:min(200px,55vw);
-    }
-
-    footer{
-        padding-left:5%;
-        padding-right:5%;
-    }
-
-    footer .footer-inner{
-        gap:18px 10px;
-    }
-
-    footer .footer-links{
-        gap:6px 9px;
-    }
-
-    footer .footer-socials a{
-        width:32px;
-        height:32px;
-    }
-
-    footer p,
-    footer span,
-    footer a{
-        font-size:7px;
+    .save-date-card{
+        margin-top:20px !important;
     }
 }
