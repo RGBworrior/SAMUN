@@ -5422,80 +5422,77 @@ footer{
     }
 }
 
+/* MOBILE FOOTER — 2 × 2 GRID */
 @media (max-width:700px){
 
-    footer .footer-inner{
+    footer{
         display:grid !important;
         grid-template-columns:1fr 1fr !important;
         grid-template-rows:auto auto !important;
-        gap:20px 15px !important;
-        width:100% !important;
+
+        gap:18px 20px !important;
+
+        padding:30px 6% !important;
+        text-align:left !important;
+
+        align-items:center !important;
     }
 
-    /* Top left */
+    /* SAMUN */
     footer .footer-brand{
         grid-column:1;
         grid-row:1;
-        justify-self:start;
+
         min-width:0;
     }
 
-    /* Top right */
-    footer .footer-links{
+    /* Copyright */
+    footer > p:nth-of-type(1){
         grid-column:2;
         grid-row:1;
 
-        display:flex !important;
-        flex-direction:row !important;
-        flex-wrap:nowrap !important;
+        margin:0 !important;
+        text-align:right !important;
 
-        justify-content:flex-end !important;
-        align-items:center !important;
-
-        gap:12px !important;
         white-space:nowrap !important;
     }
 
-    /* Bottom left */
-    footer .footer-socials{
+    /* Developer credit */
+    footer .footer-credit{
         grid-column:1;
         grid-row:2;
 
-        display:flex !important;
-        flex-direction:row !important;
-        flex-wrap:nowrap !important;
+        margin:0 !important;
+        text-align:left !important;
 
-        justify-self:start;
-        align-items:center;
-        gap:8px;
+        white-space:nowrap !important;
     }
 
-    /* Bottom right */
-    footer .footer-bottom{
+    /* Same Vision */
+    footer > p:nth-of-type(2){
         grid-column:2;
         grid-row:2;
 
-        display:flex !important;
-        flex-direction:row !important;
-        flex-wrap:nowrap !important;
-
-        align-items:center !important;
-        justify-content:flex-end !important;
-
         margin:0 !important;
-        padding:0 !important;
-        border:0 !important;
+        text-align:right !important;
 
         white-space:nowrap !important;
     }
 
-    /* STOP TEXT FROM BECOMING A LADDER */
-    footer span,
-    footer p,
-    footer a,
-    footer strong{
+    footer .footer-brand strong{
+        display:block;
         white-space:nowrap !important;
-        word-break:keep-all !important;
-        overflow-wrap:normal !important;
+        font-size:15px;
+    }
+
+    footer .footer-brand span{
+        display:block;
+        white-space:nowrap !important;
+        font-size:7px;
+    }
+
+    footer p{
+        font-size:8px;
+        line-height:1.4;
     }
 }
