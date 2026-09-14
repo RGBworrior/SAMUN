@@ -5257,7 +5257,7 @@ footer{
     }
 
     .hero-emblem img{
-        width:min(230px,58vw) !important;
+        width:min(300px,100vw) !important;
         max-width:100% !important;
         height:auto !important;
 
@@ -5283,9 +5283,52 @@ footer{
     }
 
 
-    /* REMOVE THE BIG GOLD ORBIT */
+        /* KEEP THE CIRCULAR ANIMATION — 30% VISIBLE */
     .hero::after{
-        display:none !important;
+        display:block !important;
+        content:"";
+
+        position:absolute;
+
+        width:520px;
+        height:520px;
+
+        /* Push most of the circle outside the screen */
+        right:-365px;
+        top:50%;
+
+        transform:translateY(-50%);
+
+        border-radius:50%;
+
+        border:1px solid rgba(199,166,90,.14);
+        border-top-color:rgba(223,199,127,.45);
+        border-right-color:rgba(199,166,90,.10);
+        border-bottom-color:transparent;
+        border-left-color:rgba(199,166,90,.08);
+
+        animation:heroGoldenSpinMobile 18s linear infinite;
+
+        pointer-events:none;
+        z-index:1;
+    }
+
+    @keyframes heroGoldenSpinMobile{
+        from{
+            transform:translateY(-50%) rotate(0deg);
+        }
+        to{
+            transform:translateY(-50%) rotate(360deg);
+        }
+    }
+
+    /* Keep text above the animation */
+    .hero-copy,
+    .hero-emblem,
+    .hero-meta,
+    .hero-actions{
+        position:relative;
+        z-index:5;
     }
 
 
@@ -5350,4 +5393,25 @@ footer{
     .save-date-card{
         margin-top:20px !important;
     }
+}
+
+@media (max-width:700px){
+
+    .save-date-card{
+        position:relative !important;
+        top:auto !important;
+        right:auto !important;
+        left:auto !important;
+        bottom:auto !important;
+        transform:none !important;
+
+        width:100% !important;
+        margin:25px 0 0 !important;
+    }
+
+    .hero-actions{
+        margin-top:18px !important;
+        gap:12px !important;
+    }
+
 }
