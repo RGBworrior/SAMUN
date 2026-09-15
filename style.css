@@ -5670,7 +5670,7 @@ footer{
 .principal-desk-image{
     width:340px;
     height:410px;
-    transform:translateY(-40px);
+    transform:translateY(-100px);
     position:relative;
     overflow:hidden;
     background:#171717;
