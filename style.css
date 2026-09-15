@@ -5491,3 +5491,27 @@ footer{
         line-height:1.4;
     }
 }
+
+.edition-badge{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:18px;
+}
+
+.edition-badge::before{
+    content:"";
+    width:45px;
+    height:1px;
+    background:var(--gold);
+    opacity:.7;
+}
+
+.edition-badge span{
+    color:var(--gold);
+    font-family:"Inter",sans-serif;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
