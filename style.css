@@ -5201,7 +5201,11 @@ footer{
     }
 
     .hero-meta{
-        display:none !important;
+        width:100% !important;
+        margin:22px 0 !important;
+        display:flex !important;
+        flex-wrap:wrap !important;
+        gap:10px 18px !important;
     }
 
     .hero-actions{
