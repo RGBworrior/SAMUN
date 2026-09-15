@@ -5836,414 +5836,17 @@ footer{
    SECRETARIAT
 ========================================= */
 
+/* =========================================
+   SECRETARIAT — SLEEK EDITORIAL DESIGN
+========================================= */
+
 .secretariat-section{
     position:relative;
     overflow:hidden;
 }
 
 .secretariat-section .section-heading{
-    margin-bottom:65px;
-}
-
-
-/* =========================================
-   GRID
-========================================= */
-
-.secretariat-grid{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:24px;
-
-    width:100%;
-    max-width:1150px;
-
-    margin:0 auto;
-}
-
-
-/* =========================================
-   CARD
-========================================= */
-
-.secretariat-card{
-    position:relative;
-
-    min-height:340px;
-
-    padding:38px;
-
-    overflow:hidden;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-
-    border:1px solid rgba(199,166,90,.22);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(24,24,24,.96),
-            rgba(9,9,9,.99)
-        );
-
-    transition:
-        transform .45s cubic-bezier(.2,.8,.2,1),
-        border-color .35s ease,
-        box-shadow .35s ease;
-}
-
-
-/* GOLD TOP LINE */
-
-.secretariat-card::before{
-    content:"";
-
-    position:absolute;
-    top:0;
-    left:0;
-
-    width:70px;
-    height:2px;
-
-    background:var(--gold);
-
-    transition:
-        width .4s ease,
-        box-shadow .4s ease;
-}
-
-
-/* CRIMSON GLOW */
-
-.secretariat-card::after{
-    content:"";
-
-    position:absolute;
-
-    width:240px;
-    height:240px;
-
-    right:-120px;
-    bottom:-130px;
-
-    border-radius:50%;
-
-    background:rgba(127,29,45,.09);
-
-    filter:blur(30px);
-
-    transition:
-        transform .5s ease,
-        background .5s ease;
-}
-
-
-/* =========================================
-   CARD NUMBER
-========================================= */
-
-.secretariat-number{
-    position:absolute;
-
-    top:28px;
-    right:28px;
-
-    z-index:3;
-
-    color:var(--gold);
-
-    font-family:"Cinzel",serif;
-    font-size:14px;
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    opacity:.8;
-}
-
-
-/* =========================================
-   SINGLE PERSON
-========================================= */
-
-.secretariat-person{
-    position:relative;
-    z-index:2;
-
-    display:flex;
-    align-items:center;
-
-    gap:24px;
-
-    margin-top:35px;
-}
-
-
-/* =========================================
-   TEAM
-========================================= */
-
-.secretariat-team{
-    position:relative;
-    z-index:2;
-
-    display:flex;
-    flex-direction:column;
-
-    margin-top:30px;
-}
-
-
-/* =========================================
-   SINGLE IMAGE
-========================================= */
-
-.secretariat-person .secretariat-image{
-    width:105px;
-    height:105px;
-
-    flex:0 0 105px;
-
-    position:relative;
-
-    overflow:hidden;
-
-    border:1px solid rgba(199,166,90,.45);
-
-    background:var(--black-3);
-
-    box-sizing:border-box;
-}
-
-.secretariat-person .secretariat-image::after{
-    content:"";
-
-    position:absolute;
-    inset:7px;
-
-    border:1px solid rgba(199,166,90,.18);
-
-    pointer-events:none;
-}
-
-
-/* =========================================
-   MULTIPLE IMAGES
-========================================= */
-
-.secretariat-images{
-    display:flex;
-    align-items:center;
-
-    margin-bottom:22px;
-
-    height:68px;
-}
-
-.secretariat-images .secretariat-image{
-    width:68px;
-    height:68px;
-
-    flex:0 0 68px;
-
-    margin-right:-12px;
-
-    overflow:hidden;
-
-    border-radius:50%;
-
-    border:2px solid var(--black);
-
-    background:var(--black-3);
-
-    box-sizing:border-box;
-
-    position:relative;
-
-    z-index:1;
-}
-
-.secretariat-images .secretariat-image:nth-child(2){
-    z-index:2;
-}
-
-.secretariat-images .secretariat-image:nth-child(3){
-    z-index:3;
-}
-
-
-/* =========================================
-   IMAGE
-========================================= */
-
-.secretariat-image img{
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:cover;
-
-    transition:
-        transform .4s ease,
-        filter .3s ease;
-}
-
-
-/* IMAGE HOVER */
-
-.secretariat-card:hover .secretariat-image{
-    border-color:rgba(199,166,90,.75);
-}
-
-.secretariat-card:hover .secretariat-image img{
-    transform:scale(1.06);
-    filter:brightness(1.05);
-}
-
-
-/* =========================================
-   CONTENT
-========================================= */
-
-.secretariat-content{
-    flex:1;
-
-    min-width:0;
-
-    max-width:500px;
-}
-
-
-/* ROLE */
-
-.secretariat-role{
-    display:block;
-
-    margin-bottom:10px;
-
-    color:var(--gold-light);
-
-    font-family:"Inter",sans-serif;
-
-    font-size:10px;
-    font-weight:700;
-
-    letter-spacing:2.5px;
-
-    text-transform:uppercase;
-}
-
-
-/* NAME */
-
-.secretariat-content h3{
-    margin:0 0 13px;
-
-    color:var(--text);
-
-    font-family:"Cinzel",serif;
-
-    font-size:clamp(23px,2.4vw,31px);
-
-    font-weight:600;
-
-    line-height:1.2;
-}
-
-
-/* DESCRIPTION */
-
-.secretariat-content p{
-    margin:0;
-
-    max-width:470px;
-
-    color:var(--muted);
-
-    font-family:"Inter",sans-serif;
-
-    font-size:13px;
-
-    line-height:1.75;
-}
-
-
-/* HEAD / MEMBER */
-
-.secretariat-content p strong{
-    color:var(--gold-light);
-
-    font-size:9px;
-
-    font-weight:700;
-
-    letter-spacing:1.4px;
-
-    text-transform:uppercase;
-}
-
-
-/* =========================================
-   ARROW
-========================================= */
-
-.secretariat-arrow{
-    position:absolute;
-
-    right:32px;
-    bottom:28px;
-
-    z-index:3;
-
-    color:var(--gold);
-
-    font-size:24px;
-
-    opacity:.5;
-
-    transition:
-        transform .4s ease,
-        opacity .3s ease,
-        color .3s ease;
-}
-
-
-/* =========================================
-   HOVER
-========================================= */
-
-.secretariat-card:hover{
-    transform:translateY(-10px);
-
-    border-color:rgba(199,166,90,.65);
-
-    box-shadow:
-        0 25px 60px rgba(0,0,0,.4),
-        0 0 35px rgba(199,166,90,.07);
-}
-
-.secretariat-card:hover::before{
-    width:150px;
-
-    box-shadow:
-        0 0 18px rgba(199,166,90,.45);
-}
-
-.secretariat-card:hover::after{
-    transform:scale(1.5);
-
-    background:rgba(127,29,45,.15);
-}
-
-.secretariat-card:hover .secretariat-arrow{
-    transform:translate(5px,-5px);
-
-    opacity:1;
-
-    color:var(--gold-light);
+    margin-bottom:75px;
 }
 
 
@@ -6251,23 +5854,486 @@ footer{
    SENIOR LEADERSHIP
 ========================================= */
 
-.senior-card{
-    border-color:rgba(199,166,90,.32);
+.secretariat-leadership{
+    width:100%;
+    max-width:1150px;
+    margin:0 auto 105px;
 
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    border-top:1px solid rgba(199,166,90,.25);
+}
+
+
+.leadership-member{
+    position:relative;
+
+    min-height:220px;
+
+    padding:38px 40px;
+
+    display:grid;
+    grid-template-columns:70px 125px 1fr;
+    align-items:center;
+    gap:25px;
+
+    border-bottom:1px solid rgba(199,166,90,.16);
+
+    background:transparent;
+
+    transition:
+        background .35s ease,
+        transform .35s ease;
+}
+
+
+/* Vertical divider */
+
+.leadership-member:nth-child(odd){
+    border-right:1px solid rgba(199,166,90,.16);
+}
+
+
+/* Number */
+
+.leadership-number{
+    align-self:start;
+
+    padding-top:3px;
+
+    color:rgba(199,166,90,.45);
+
+    font-family:"Cinzel",serif;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+}
+
+
+/* Photo */
+
+.leadership-photo{
+    width:125px;
+    height:145px;
+
+    overflow:hidden;
+
+    background:#111;
+
+    border:1px solid rgba(199,166,90,.28);
+
+    position:relative;
+}
+
+
+.leadership-photo::before{
+    content:"";
+
+    position:absolute;
+
+    inset:7px;
+
+    border:1px solid rgba(199,166,90,.15);
+
+    z-index:2;
+
+    pointer-events:none;
+}
+
+
+.leadership-photo img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    filter:saturate(.75);
+
+    transition:
+        transform .5s ease,
+        filter .5s ease;
+}
+
+
+/* Information */
+
+.leadership-info{
+    min-width:0;
+}
+
+
+.leadership-role{
+    display:block;
+
+    margin-bottom:10px;
+
+    color:var(--gold);
+
+    font-family:"Inter",sans-serif;
+
+    font-size:8px;
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+}
+
+
+.leadership-info h3{
+    margin:0 0 10px;
+
+    color:var(--ivory);
+
+    font-family:"Cinzel",serif;
+
+    font-size:25px;
+
+    font-weight:600;
+
+    line-height:1.2;
+}
+
+
+.leadership-info p{
+    max-width:260px;
+
+    margin:0;
+
+    color:#88827a;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:11px;
+
+    line-height:1.7;
+}
+
+
+/* Small arrow */
+
+.leadership-mark{
+    position:absolute;
+
+    right:24px;
+    bottom:20px;
+
+    color:rgba(199,166,90,.4);
+
+    font-size:18px;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+/* Featured leaders */
+
+.leadership-member.featured{
     background:
         linear-gradient(
-            145deg,
-            rgba(127,29,45,.15),
-            rgba(10,10,10,.98) 70%
+            135deg,
+            rgba(127,29,45,.10),
+            transparent 65%
         );
 }
 
-.senior-card::before{
-    width:110px;
+
+.leadership-member:hover{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(127,29,45,.14),
+            rgba(199,166,90,.025)
+        );
 }
 
-.senior-card .secretariat-role{
+
+.leadership-member:hover .leadership-photo img{
+    transform:scale(1.05);
+
+    filter:saturate(1);
+}
+
+
+.leadership-member:hover .leadership-mark{
+    color:var(--gold-light);
+
+    transform:translate(4px,-4px);
+}
+
+
+/* =========================================
+   USG HEADER
+========================================= */
+
+.usg-header{
+    width:100%;
+    max-width:1150px;
+
+    margin:0 auto 35px;
+
+    padding-bottom:28px;
+
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+
+    border-bottom:1px solid rgba(199,166,90,.25);
+}
+
+
+.usg-header span{
+    display:block;
+
+    margin-bottom:9px;
+
     color:var(--gold);
+
+    font-family:"Inter",sans-serif;
+
+    font-size:8px;
+    font-weight:800;
+
+    letter-spacing:2.5px;
+}
+
+
+.usg-header h3{
+    margin:0;
+
+    color:var(--ivory);
+
+    font-family:"Cinzel",serif;
+
+    font-size:30px;
+
+    font-weight:600;
+}
+
+
+.usg-header p{
+    max-width:280px;
+
+    margin:0;
+
+    color:#817b73;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:11px;
+
+    line-height:1.6;
+
+    text-align:right;
+}
+
+
+/* =========================================
+   USG DIRECTORY
+========================================= */
+
+.usg-directory{
+    width:100%;
+    max-width:1150px;
+
+    margin:0 auto;
+}
+
+
+.usg-row{
+    position:relative;
+
+    min-height:125px;
+
+    display:grid;
+
+    grid-template-columns:70px 1fr 2.1fr;
+
+    align-items:center;
+
+    gap:35px;
+
+    padding:25px 30px;
+
+    border-bottom:1px solid rgba(199,166,90,.14);
+
+    transition:
+        background .3s ease,
+        padding .3s ease;
+}
+
+
+.usg-row:first-child{
+    border-top:1px solid rgba(199,166,90,.14);
+}
+
+
+/* Number */
+
+.usg-number{
+    color:rgba(199,166,90,.42);
+
+    font-family:"Cinzel",serif;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+}
+
+
+/* Department */
+
+.usg-department{
+    position:relative;
+}
+
+
+.usg-department span{
+    display:block;
+
+    margin-bottom:7px;
+
+    color:#766f67;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:7px;
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+
+.usg-department h4{
+    margin:0;
+
+    color:var(--ivory);
+
+    font-family:"Cinzel",serif;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    line-height:1.25;
+}
+
+
+/* People */
+
+.usg-people{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:30px;
+}
+
+
+.usg-person{
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    min-width:145px;
+}
+
+
+.usg-photo{
+    width:46px;
+    height:46px;
+
+    flex:0 0 46px;
+
+    overflow:hidden;
+
+    border-radius:50%;
+
+    border:1px solid rgba(199,166,90,.3);
+
+    background:#111;
+}
+
+
+.usg-photo img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    filter:saturate(.7);
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+}
+
+
+.usg-person strong{
+    display:block;
+
+    margin-bottom:2px;
+
+    color:#d9d2c6;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    line-height:1.25;
+}
+
+
+.usg-person small{
+    display:block;
+
+    color:var(--gold);
+
+    font-family:"Inter",sans-serif;
+
+    font-size:6px;
+
+    font-weight:800;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+}
+
+
+/* Hover */
+
+.usg-row:hover{
+    padding-left:38px;
+    padding-right:38px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(127,29,45,.09),
+            transparent 65%
+        );
+}
+
+
+.usg-row:hover .usg-photo img{
+    transform:scale(1.08);
+
+    filter:saturate(1);
 }
 
 
@@ -6277,181 +6343,269 @@ footer{
 
 @media(max-width:800px){
 
-    .secretariat-grid{
+    .secretariat-leadership{
         grid-template-columns:1fr;
 
-        max-width:650px;
+        margin-bottom:80px;
+    }
+
+
+    .leadership-member:nth-child(odd){
+        border-right:0;
+    }
+
+
+    .leadership-member{
+        min-height:200px;
+
+        grid-template-columns:45px 100px 1fr;
+
+        gap:20px;
+
+        padding:28px 24px;
+    }
+
+
+    .leadership-photo{
+        width:100px;
+        height:120px;
+    }
+
+
+    .leadership-info h3{
+        font-size:21px;
+    }
+
+
+    .usg-header{
+        align-items:flex-start;
+
+        flex-direction:column;
 
         gap:18px;
     }
 
-    .secretariat-card{
-        min-height:300px;
+
+    .usg-header p{
+        text-align:left;
+    }
+
+
+    .usg-row{
+        grid-template-columns:45px 1fr;
+
+        gap:15px;
+
+        padding:25px 20px;
+    }
+
+
+    .usg-people{
+        grid-column:2;
+
+        justify-content:flex-start;
+
+        flex-wrap:wrap;
+
+        gap:18px;
+    }
+
+
+    .usg-person{
+        min-width:170px;
+    }
+
+
+    .usg-row:hover{
+        padding-left:25px;
+        padding-right:25px;
     }
 }
 
 
-@media(max-width:700px){
-
-    .secretariat-section{
-        padding-left:6%;
-        padding-right:6%;
-    }
+@media(max-width:600px){
 
     .secretariat-section .section-heading{
-        margin-bottom:45px;
-    }
-
-    .secretariat-grid{
-        width:100%;
-    }
-
-    .secretariat-card{
-        min-height:300px;
-
-        padding:28px;
+        margin-bottom:55px;
     }
 
 
-    /* SINGLE PERSON */
-
-    .secretariat-person{
-        gap:18px;
-
-        margin-top:32px;
-    }
-
-    .secretariat-person .secretariat-image{
-        width:85px;
-        height:85px;
-
-        flex:0 0 85px;
+    .secretariat-leadership{
+        margin-bottom:70px;
     }
 
 
-    /* TEAM */
+    .leadership-member{
+        min-height:180px;
 
-    .secretariat-team{
-        margin-top:28px;
-    }
+        grid-template-columns:30px 78px 1fr;
 
-    .secretariat-images{
-        height:58px;
-        margin-bottom:18px;
-    }
+        gap:15px;
 
-    .secretariat-images .secretariat-image{
-        width:58px;
-        height:58px;
-
-        flex:0 0 58px;
-
-        margin-right:-10px;
+        padding:25px 18px;
     }
 
 
-    /* TEXT */
-
-    .secretariat-content h3{
-        font-size:23px;
-
-        margin-bottom:8px;
-    }
-
-    .secretariat-content p{
-        font-size:12px;
-
-        line-height:1.7;
-    }
-
-    .secretariat-role{
-        font-size:8px;
-
-        letter-spacing:1.9px;
-
-        margin-bottom:8px;
+    .leadership-photo{
+        width:78px;
+        height:100px;
     }
 
 
-    /* NUMBER */
+    .leadership-role{
+        font-size:7px;
 
-    .secretariat-number{
-        top:23px;
-        right:23px;
-
-        font-size:12px;
+        letter-spacing:1.8px;
     }
 
 
-    /* ARROW */
+    .leadership-info h3{
+        font-size:18px;
 
-    .secretariat-arrow{
-        right:24px;
-        bottom:22px;
+        margin-bottom:7px;
+    }
 
-        font-size:21px;
+
+    .leadership-info p{
+        font-size:10px;
+    }
+
+
+    .leadership-number{
+        font-size:10px;
+    }
+
+
+    .leadership-mark{
+        right:16px;
+        bottom:14px;
+
+        font-size:15px;
+    }
+
+
+    .usg-header h3{
+        font-size:26px;
+    }
+
+
+    .usg-row{
+        grid-template-columns:30px 1fr;
+
+        gap:12px;
+
+        padding:23px 10px;
+    }
+
+
+    .usg-number{
+        font-size:10px;
+    }
+
+
+    .usg-department h4{
+        font-size:18px;
+    }
+
+
+    .usg-department span{
+        font-size:6px;
+    }
+
+
+    .usg-people{
+        gap:14px;
+
+        margin-top:4px;
+    }
+
+
+    .usg-person{
+        min-width:145px;
+
+        gap:9px;
+    }
+
+
+    .usg-photo{
+        width:40px;
+        height:40px;
+
+        flex-basis:40px;
+    }
+
+
+    .usg-person strong{
+        font-size:9px;
+    }
+
+
+    .usg-person small{
+        font-size:5px;
     }
 }
 
 
 @media(max-width:400px){
 
-    .secretariat-section{
-        padding-left:5%;
-        padding-right:5%;
+    .leadership-member{
+        grid-template-columns:25px 68px 1fr;
+
+        gap:12px;
+
+        padding:22px 12px;
     }
 
-    .secretariat-card{
-        min-height:300px;
 
-        padding:24px;
+    .leadership-photo{
+        width:68px;
+        height:90px;
     }
 
-    .secretariat-person{
-        gap:14px;
+
+    .leadership-info h3{
+        font-size:16px;
     }
 
-    .secretariat-person .secretariat-image{
-        width:72px;
-        height:72px;
 
-        flex:0 0 72px;
+    .leadership-info p{
+        font-size:9px;
     }
 
-    .secretariat-images{
-        height:52px;
+
+    .leadership-role{
+        font-size:6px;
+
+        letter-spacing:1.4px;
     }
 
-    .secretariat-images .secretariat-image{
-        width:52px;
-        height:52px;
 
-        flex:0 0 52px;
-
-        margin-right:-9px;
+    .usg-row{
+        padding-left:5px;
+        padding-right:5px;
     }
 
-    .secretariat-content h3{
-        font-size:21px;
+
+    .usg-row:hover{
+        padding-left:10px;
+        padding-right:10px;
     }
 
-    .secretariat-content p{
-        font-size:11px;
+
+    .usg-person{
+        min-width:135px;
     }
 
-    .secretariat-role{
+
+    .usg-photo{
+        width:36px;
+        height:36px;
+
+        flex-basis:36px;
+    }
+
+
+    .usg-person strong{
         font-size:8px;
-        letter-spacing:1.6px;
-    }
-
-    .secretariat-number{
-        top:20px;
-        right:20px;
-    }
-
-    .secretariat-arrow{
-        right:20px;
-        bottom:18px;
-        font-size:19px;
     }
 }
