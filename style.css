@@ -5493,42 +5493,95 @@ footer{
 }
 
 .edition-badge{
-    display:flex;
+    display:inline-flex;
     align-items:center;
     gap:14px;
-    margin-bottom:18px;
+    margin-bottom:22px;
+    padding:10px 18px;
+    border:1px solid rgba(199,166,90,.55);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(127,29,45,.35),
+            rgba(199,166,90,.08)
+        );
+    box-shadow:
+        0 0 25px rgba(127,29,45,.12),
+        inset 0 0 20px rgba(199,166,90,.04);
+    position:relative;
+    overflow:hidden;
 }
 
 .edition-badge::before{
     content:"";
-    width:45px;
-    height:1px;
-    background:var(--gold);
-    opacity:.7;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--gold-light);
+    box-shadow:0 0 12px rgba(223,199,127,.8);
+    animation:editionPulse 2s ease-in-out infinite;
+}
+
+.edition-badge::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:60%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(223,199,127,.12),
+        transparent
+    );
+    animation:editionShine 4s ease-in-out infinite;
 }
 
 .edition-badge span{
-    color:var(--gold);
-    font-family:"Inter",sans-serif;
-    font-size:10px;
+    color:var(--gold-light);
+    font-family:"Cinzel",serif;
+    font-size:15px;
     font-weight:700;
-    letter-spacing:3px;
+    letter-spacing:4px;
     text-transform:uppercase;
+    text-shadow:0 0 18px rgba(199,166,90,.25);
+}
+
+@keyframes editionPulse{
+    0%,100%{
+        opacity:.55;
+        transform:scale(.9);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.15);
+    }
+}
+
+@keyframes editionShine{
+    0%{
+        left:-100%;
+    }
+    45%,100%{
+        left:150%;
+    }
 }
 
 @media(max-width:700px){
-
     .edition-badge{
         gap:10px;
-        margin-bottom:14px;
+        margin-bottom:16px;
+        padding:8px 13px;
     }
 
     .edition-badge::before{
-        width:28px;
+        width:6px;
+        height:6px;
     }
 
     .edition-badge span{
-        font-size:8px;
-        letter-spacing:2.2px;
+        font-size:11px;
+        letter-spacing:2.8px;
     }
 }
