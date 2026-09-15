@@ -5515,3 +5515,20 @@ footer{
     letter-spacing:3px;
     text-transform:uppercase;
 }
+
+@media(max-width:700px){
+
+    .edition-badge{
+        gap:10px;
+        margin-bottom:14px;
+    }
+
+    .edition-badge::before{
+        width:28px;
+    }
+
+    .edition-badge span{
+        font-size:8px;
+        letter-spacing:2.2px;
+    }
+}
