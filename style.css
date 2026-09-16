@@ -6609,3 +6609,63 @@ footer{
         font-size:8px;
     }
 }
+
+/* =========================================
+   CONTACT SEND MESSAGE — REMOVE PURPLE
+========================================= */
+
+.contact-submit,
+.contact-submit:focus,
+.contact-submit:active,
+.contact-submit:hover{
+    background:linear-gradient(
+        135deg,
+        var(--gold-light),
+        var(--gold)
+    ) !important;
+
+    color:#0b0b0b !important;
+
+    border-color:var(--gold) !important;
+
+    outline:none !important;
+
+    box-shadow:none;
+}
+
+
+/* Keep the arrow gold/black instead of purple */
+
+.contact-submit strong{
+    color:#0b0b0b !important;
+}
+
+
+/* Hover — SAMUN gold treatment */
+
+.contact-submit:hover{
+    background:transparent !important;
+    color:var(--gold) !important;
+
+    border-color:var(--gold) !important;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.25) !important;
+
+    transform:translateY(-3px);
+}
+
+.contact-submit:hover strong{
+    color:var(--gold) !important;
+    transform:translateX(6px);
+}
+
+
+/* Keyboard focus */
+
+.contact-submit:focus-visible{
+    outline:1px solid var(--gold) !important;
+    outline-offset:3px;
+
+    box-shadow:none !important;
+}
