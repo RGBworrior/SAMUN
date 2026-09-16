@@ -6669,3 +6669,94 @@ footer{
 
     box-shadow:none !important;
 }
+
+/* =========================================
+   PRINCIPAL'S DESK — CENTRED
+========================================= */
+
+.principal-desk{
+    text-align:center;
+}
+
+.principal-desk-inner{
+    width:100%;
+    max-width:1150px;
+    margin:0 auto;
+}
+
+.principal-desk-heading{
+    width:100%;
+    max-width:800px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+
+.principal-desk-heading .eyebrow{
+    text-align:center;
+}
+
+.principal-desk-heading h2{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.principal-desk-content{
+    width:100%;
+    max-width:1000px;
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:360px 1fr;
+    align-items:center;
+    gap:70px;
+
+    text-align:left;
+}
+
+.principal-desk-image{
+    width:360px;
+    height:440px;
+    margin:0 auto;
+}
+
+.principal-desk-image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+.principal-desk-message{
+    text-align:left;
+}
+
+@media(max-width:800px){
+
+    .principal-desk-heading{
+        margin-bottom:45px;
+    }
+
+    .principal-desk-content{
+        grid-template-columns:1fr;
+        gap:40px;
+        text-align:center;
+    }
+
+    .principal-desk-image{
+        width:min(360px,90vw);
+        height:420px;
+    }
+
+    .principal-desk-message{
+        text-align:center;
+    }
+}
+
+@media(max-width:400px){
+
+    .principal-desk-image{
+        width:100%;
+        height:380px;
+    }
+}
