@@ -6755,12 +6755,37 @@ footer{
 
         width:100%;
 
-        gap:20px;
+        gap:30px;
 
         align-items:center;
 
         text-align:left;
     }
+    
+    .principal-desk-image{
+        width:min(360px,90vw);
+        height:420px;
+
+        margin:55px;
+    }
+
+
+    .principal-desk-message{
+        width:100%;
+        max-width:650px;
+
+        text-align:left;
+    }
+
+
+    .principal-desk-message p{
+        text-align:left;
+
+        font-size:14px;
+        line-height:1.8;
+    }
+}
+
 
 /* =========================================
    USG SECTION — APEX STYLE
@@ -7225,30 +7250,3 @@ footer{
         font-size:11px;
     }
 }
-
-
-    .principal-desk-image{
-        width:min(360px,90vw);
-        height:420px;
-
-        margin:55px;
-    }
-
-
-    .principal-desk-message{
-        width:100%;
-        max-width:650px;
-
-        text-align:left;
-    }
-
-
-    .principal-desk-message p{
-        text-align:left;
-
-        font-size:14px;
-        line-height:1.8;
-    }
-}
-
-
