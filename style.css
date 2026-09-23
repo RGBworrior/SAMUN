@@ -5628,6 +5628,7 @@ footer{
 
 .principal-desk-heading{
     margin-bottom:60px;
+    text-align:center;
 }
 
 .principal-desk-heading .eyebrow{
@@ -5641,7 +5642,8 @@ footer{
 
 .principal-desk-heading h2{
     max-width:650px;
-    margin:0;
+    margin:0 auto;
+
     font-family:"Cinzel",serif;
     font-size:clamp(38px,5vw,62px);
     line-height:1.1;
@@ -5793,7 +5795,6 @@ footer{
         width:min(300px,100%);
         height:360px;
         margin:55px;
-        margin-bottom:35px;
     }
 
     .principal-desk-message{
@@ -7089,19 +7090,4 @@ footer{
     width: min(1380px, 92%);
     margin-left: 4%;
     margin-right: auto;
-}
-
-.principal-desk-heading{
-    display:block !important;
-    width:100% !important;
-    max-width:800px !important;
-    margin-left:auto !important;
-    margin-right:auto !important;
-    text-align:center !important;
-}
-
-.principal-desk-heading h2,
-.principal-desk-heading .eyebrow{
-    width:100%;
-    text-align:center !important;
 }
