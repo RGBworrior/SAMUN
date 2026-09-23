@@ -6806,3 +6806,281 @@ footer{
         transition: none;
     }
 }
+
+/* =========================================
+   SECRETARIAT — MOBILE
+   NO HORIZONTAL SCROLL
+========================================= */
+
+@media (max-width: 600px){
+
+    .secretariat-section{
+        width:100%;
+        max-width:100%;
+        overflow:hidden;
+    }
+
+    .secretariat-leadership{
+        width:100%;
+        max-width:100%;
+        margin:0 0 55px;
+
+        display:grid;
+        grid-template-columns:1fr;
+    }
+
+    .leadership-member{
+        width:100%;
+        min-width:0;
+        box-sizing:border-box;
+
+        padding:24px 16px;
+
+        display:grid;
+        grid-template-columns:28px 82px minmax(0,1fr);
+        gap:12px;
+
+        overflow:hidden;
+    }
+
+    .leadership-number{
+        min-width:0;
+    }
+
+    .leadership-photo{
+        width:82px;
+        height:105px;
+        min-width:0;
+    }
+
+    .leadership-info{
+        min-width:0;
+        width:100%;
+        overflow:hidden;
+    }
+
+    .leadership-info h3{
+        margin:0 0 6px;
+
+        font-size:16px;
+        line-height:1.2;
+
+        /* Prevent long names from causing overflow */
+        overflow-wrap:anywhere;
+        word-break:break-word;
+    }
+
+    .leadership-role{
+        font-size:6.5px;
+        letter-spacing:1.5px;
+
+        white-space:normal;
+        overflow-wrap:anywhere;
+    }
+
+    .leadership-info p{
+        width:100%;
+        max-width:100%;
+
+        font-size:9px;
+        line-height:1.5;
+
+        overflow-wrap:anywhere;
+        word-break:break-word;
+    }
+
+    .leadership-mark{
+        right:10px;
+        bottom:10px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width:400px){
+
+    .leadership-member{
+        padding:20px 12px;
+
+        grid-template-columns:24px 72px minmax(0,1fr);
+        gap:10px;
+    }
+
+    .leadership-photo{
+        width:72px;
+        height:95px;
+    }
+
+    .leadership-info h3{
+        font-size:14px;
+    }
+
+    .leadership-role{
+        font-size:6px;
+        letter-spacing:1.2px;
+    }
+
+    .leadership-info p{
+        font-size:8px;
+    }
+}
+
+/* =========================================
+   USG — MOBILE
+   NO HORIZONTAL SCROLL
+========================================= */
+
+@media (max-width: 650px){
+
+    .usg-section{
+        width:92%;
+        padding-bottom:70px;
+        overflow:hidden;
+    }
+
+    .usg-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+
+        margin-top:60px;
+        margin-bottom:35px;
+    }
+
+    .usg-header h3{
+        font-size:28px;
+    }
+
+    .usg-header > p{
+        font-size:12px;
+        max-width:100%;
+    }
+
+    /* Department becomes a clean vertical section */
+    .usg-department{
+        display:block;
+        width:100%;
+        min-height:0;
+
+        padding:30px 0;
+
+        overflow:hidden;
+    }
+
+    .usg-department-top{
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+
+        margin-bottom:22px;
+        padding:0 0 15px;
+
+        border-bottom:1px solid rgba(199,166,90,.12);
+    }
+
+    .usg-department-top > span{
+        font-size:24px;
+    }
+
+    .usg-department-title{
+        display:block;
+        width:100%;
+        padding:0;
+    }
+
+    .usg-department-title h3{
+        font-size:24px;
+        line-height:1.2;
+    }
+
+    .usg-department-title p{
+        margin-top:8px;
+        font-size:8px;
+    }
+
+    /* People now wrap instead of scrolling */
+    .usg-department > .usg-people{
+        display:grid;
+
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+
+        gap:12px;
+
+        width:100%;
+        margin-top:25px;
+        padding:0;
+
+        overflow:visible;
+    }
+
+    /* Smaller photo cards */
+    .usg-person,
+    .usg-person.usg-head{
+        width:100%;
+        min-width:0;
+    }
+
+    .usg-photo,
+    .usg-person.usg-head .usg-photo{
+        width:100%;
+        height:170px;
+    }
+
+    .usg-person-info,
+    .usg-person.usg-head .usg-person-info{
+        padding:11px;
+    }
+
+    .usg-person-info span{
+        font-size:7px;
+        letter-spacing:.12em;
+    }
+
+    .usg-person-info strong{
+        font-size:11px;
+        line-height:1.35;
+        overflow-wrap:anywhere;
+    }
+
+    .usg-photo::before{
+        inset:6px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width:400px){
+
+    .usg-section{
+        width:94%;
+    }
+
+    .usg-department > .usg-people{
+        grid-template-columns:repeat(2, minmax(0,1fr));
+        gap:9px;
+    }
+
+    .usg-photo,
+    .usg-person.usg-head .usg-photo{
+        height:145px;
+    }
+
+    .usg-person-info,
+    .usg-person.usg-head .usg-person-info{
+        padding:9px;
+    }
+
+    .usg-person-info strong{
+        font-size:10px;
+    }
+
+    .usg-department-title h3{
+        font-size:21px;
+    }
+}
