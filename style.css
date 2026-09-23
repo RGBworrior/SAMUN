@@ -7085,32 +7085,8 @@ footer{
     }
 }
 
-/* =========================================
-   USG — RIGHT ALIGNMENT
-========================================= */
-
 .usg-section{
-    margin-left:auto;
-    margin-right:0;
-}
-
-.usg-header{
-    margin-left:0;
-    margin-right:0;
-
-    justify-content:flex-end;
-    align-items:flex-end;
-}
-
-.usg-header > p{
-    text-align:right;
-}
-
-.usg-department{
-    margin-left:0;
-    margin-right:0;
-}
-
-.usg-people{
-    justify-content:flex-end;
+    width: min(1380px, 92%);
+    margin-left: 4%;
+    margin-right: auto;
 }
