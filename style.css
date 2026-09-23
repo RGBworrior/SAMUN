@@ -7437,3 +7437,565 @@ footer{
         flex-basis:44px;
     }
 }
+
+/* =========================================================
+   SAMUN — USG DIRECTORY
+   Designed around the existing SAMUN root theme
+   ========================================================= */
+
+.usg-section {
+    width: min(1380px, 92%);
+    margin: 0 auto;
+    padding: 20px 0 100px;
+}
+
+
+/* =========================================================
+   USG HEADER
+   ========================================================= */
+
+.usg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 60px;
+
+    margin: 90px 0 45px;
+    padding: 0 0 28px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.usg-header > div {
+    position: relative;
+}
+
+.usg-header > div::before {
+    content: "";
+
+    display: block;
+
+    width: 42px;
+    height: 2px;
+
+    margin-bottom: 18px;
+
+    background: var(--gold);
+}
+
+.usg-header span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+.usg-header h3 {
+    margin: 0;
+
+    font-family: "Cinzel", serif;
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 500;
+    line-height: 1.15;
+
+    color: var(--ivory);
+}
+
+.usg-header > p {
+    max-width: 340px;
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   DIRECTORY
+   ========================================================= */
+
+.usg-directory {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   DEPARTMENT CARD
+   ========================================================= */
+
+.usg-department {
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 28px;
+
+    background: var(--black-2);
+
+    border: 1px solid var(--line);
+
+    overflow: hidden;
+
+    transition:
+        border-color .4s ease,
+        transform .4s ease,
+        background .4s ease;
+}
+
+
+/* Fine inner frame */
+
+.usg-department::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    border: 1px solid rgba(199,166,90,.055);
+
+    pointer-events: none;
+}
+
+
+/* Gold bottom accent */
+
+.usg-department::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--gold);
+
+    transition: width .45s ease;
+}
+
+
+.usg-department:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(199,166,90,.42);
+
+    background: var(--black-3);
+}
+
+.usg-department:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   TOP ROW
+   ========================================================= */
+
+.usg-department-top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.usg-department-top > span {
+    font-family: "Cinzel", serif;
+    font-size: 27px;
+    font-weight: 500;
+
+    color: var(--gold);
+}
+
+.usg-department-top small {
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   DEPARTMENT TITLE
+   ========================================================= */
+
+.usg-department-title {
+    position: relative;
+    z-index: 2;
+
+    padding: 25px 0 24px;
+}
+
+.usg-department-title h3 {
+    margin: 0 0 8px;
+
+    font-family: "Cinzel", serif;
+    font-size: clamp(20px, 2vw, 27px);
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: var(--ivory);
+}
+
+.usg-department-title p {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .18em;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   PEOPLE GRID
+   ========================================================= */
+
+.usg-people {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   PERSON FRAME
+   ========================================================= */
+
+.usg-person {
+    position: relative;
+
+    background: var(--black);
+
+    border: 1px solid rgba(199,166,90,.14);
+
+    overflow: hidden;
+
+    transition:
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+.usg-person:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(199,166,90,.45);
+}
+
+
+/* =========================================================
+   PORTRAIT
+   ========================================================= */
+
+.usg-photo {
+    position: relative;
+
+    width: 100%;
+    height: 170px;
+
+    background: var(--black-3);
+
+    border-bottom: 1px solid rgba(199,166,90,.12);
+
+    overflow: hidden;
+}
+
+.usg-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: grayscale(15%);
+
+    transition:
+        transform .6s ease,
+        filter .5s ease;
+}
+
+.usg-person:hover .usg-photo img {
+    transform: scale(1.04);
+
+    filter: grayscale(0%);
+}
+
+
+/* Subtle photograph overlay */
+
+.usg-photo::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 60%,
+        rgba(0,0,0,.35)
+    );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PERSON INFORMATION
+   ========================================================= */
+
+.usg-person-info {
+    padding: 12px 12px 14px;
+}
+
+.usg-person-info span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+.usg-person-info strong {
+    display: block;
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.35;
+
+    color: var(--ivory);
+}
+
+
+/* =========================================================
+   HEAD — SLIGHTLY DISTINGUISHED
+   ========================================================= */
+
+.usg-person.usg-head {
+    border-color: rgba(199,166,90,.32);
+}
+
+.usg-person.usg-head .usg-person-info {
+    border-top: 1px solid rgba(199,166,90,.08);
+}
+
+
+/* =========================================================
+   2 PEOPLE
+   ========================================================= */
+
+.usg-people:has(.usg-person:nth-child(2):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+
+/* =========================================================
+   1 PERSON
+   ========================================================= */
+
+.usg-people:has(.usg-person:only-child) {
+    grid-template-columns: minmax(180px, 260px);
+}
+
+
+/* =========================================================
+   SINGLE PERSON — LARGER PORTRAIT
+   ========================================================= */
+
+.usg-people:has(.usg-person:only-child) .usg-photo {
+    height: 220px;
+}
+
+
+/* =========================================================
+   SMALL NUMBER DETAIL
+   ========================================================= */
+
+.usg-department-top > span {
+    position: relative;
+}
+
+.usg-department-top > span::after {
+    content: "";
+
+    position: absolute;
+
+    left: calc(100% + 10px);
+    top: 50%;
+
+    width: 24px;
+    height: 1px;
+
+    background: var(--gold);
+
+    opacity: .25;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .usg-section {
+        width: min(92%, 720px);
+    }
+
+    .usg-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 22px;
+    }
+
+    .usg-header > p {
+        max-width: 520px;
+    }
+
+    .usg-directory {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .usg-section {
+        width: 92%;
+
+        padding-bottom: 70px;
+    }
+
+    .usg-header {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .usg-header h3 {
+        font-size: 27px;
+    }
+
+    .usg-header > p {
+        font-size: 12px;
+    }
+
+    .usg-department {
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+    .usg-department::before {
+        inset: 6px;
+    }
+
+    .usg-department-title {
+        padding: 22px 0;
+    }
+
+    .usg-department-title h3 {
+        font-size: 21px;
+    }
+
+    .usg-people {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .usg-photo {
+        height: 145px;
+    }
+
+    .usg-person-info {
+        padding: 10px;
+    }
+
+    .usg-person-info strong {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .usg-people,
+    .usg-people:has(.usg-person:nth-child(2):last-child) {
+        grid-template-columns: 1fr;
+    }
+
+    .usg-photo {
+        height: 210px;
+    }
+
+    .usg-people:has(.usg-person:only-child) {
+        max-width: 230px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .usg-department,
+    .usg-person,
+    .usg-photo img,
+    .usg-department::after {
+        transition: none;
+    }
+
+}
