@@ -6788,83 +6788,47 @@ footer{
 
 
 /* =========================================
-   USG DIRECTORY — SQUARE PORTRAIT SYSTEM
+   USG SECTION — ARTISTIC APEX DIRECTORY
 ========================================= */
 
 .usg-section{
     position:relative;
-    padding:120px 8%;
+    padding:30px 0 120px;
     overflow:hidden;
 }
 
 
 /* =========================================
-   HEADING
-========================================= */
-
-.usg-heading{
-    width:100%;
-    max-width:820px;
-    margin:0 auto 65px;
-    text-align:center;
-}
-
-.usg-heading .eyebrow{
-    text-align:center;
-}
-
-.usg-heading h2{
-    margin:0 0 18px;
-
-    color:var(--ivory);
-
-    font-family:"Cinzel",serif;
-    font-size:clamp(38px,5vw,64px);
-    font-weight:600;
-    line-height:1.08;
-}
-
-.usg-heading h2 em{
-    color:var(--gold);
-    font-style:normal;
-}
-
-.usg-heading > p:last-child{
-    max-width:620px;
-    margin:0 auto;
-
-    color:var(--muted);
-
-    font-family:"Inter",sans-serif;
-    font-size:13px;
-    line-height:1.8;
-}
-
-
-/* =========================================
-   DIRECTORY GRID
+   DIRECTORY
 ========================================= */
 
 .usg-directory{
     width:100%;
-    max-width:1200px;
+    max-width:1150px;
     margin:0 auto;
 
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
 
-    gap:24px;
+    gap:22px;
 }
 
 
 /* =========================================
-   DEPARTMENT
+   DEPARTMENT CARD
 ========================================= */
 
 .usg-department{
     position:relative;
 
-    padding:30px;
+    min-height:350px;
+
+    padding:32px;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
 
     border:1px solid rgba(199,166,90,.22);
 
@@ -6875,52 +6839,24 @@ footer{
             rgba(8,8,8,.98)
         );
 
-    overflow:hidden;
-
     transition:
         transform .35s ease,
         border-color .35s ease,
-        box-shadow .35s ease,
-        background .35s ease;
+        background .35s ease,
+        box-shadow .35s ease;
 }
 
 
-/* crimson atmosphere */
-
-.usg-department::after{
-    content:"";
-
-    position:absolute;
-
-    width:260px;
-    height:260px;
-
-    right:-150px;
-    bottom:-150px;
-
-    border-radius:50%;
-
-    background:rgba(127,29,45,.14);
-
-    filter:blur(45px);
-
-    pointer-events:none;
-
-    transition:transform .5s ease;
-}
-
-
-/* gold top line */
+/* gold accent */
 
 .usg-department::before{
     content:"";
 
     position:absolute;
-
     top:0;
     left:0;
 
-    width:90px;
+    width:85px;
     height:2px;
 
     background:var(--gold);
@@ -6929,8 +6865,33 @@ footer{
 }
 
 
+/* subtle crimson atmosphere */
+
+.usg-department::after{
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+    height:240px;
+
+    right:-130px;
+    bottom:-130px;
+
+    border-radius:50%;
+
+    background:rgba(127,29,45,.12);
+
+    filter:blur(35px);
+
+    pointer-events:none;
+
+    transition:transform .5s ease;
+}
+
+
 /* =========================================
-   DEPARTMENT HEADER
+   TOP
 ========================================= */
 
 .usg-department-top{
@@ -6938,7 +6899,7 @@ footer{
     align-items:center;
     justify-content:space-between;
 
-    margin-bottom:30px;
+    margin-bottom:40px;
 }
 
 .usg-department-top > span{
@@ -6961,21 +6922,21 @@ footer{
 }
 
 
+/* =========================================
+   DEPARTMENT TITLE
+========================================= */
+
 .usg-department-title{
-    padding-bottom:22px;
-
-    margin-bottom:24px;
-
-    border-bottom:1px solid rgba(199,166,90,.15);
+    margin-bottom:30px;
 }
 
 .usg-department-title h3{
-    margin:0 0 7px;
+    margin:0 0 9px;
 
     color:var(--ivory);
 
     font-family:"Cinzel",serif;
-    font-size:clamp(24px,2.5vw,31px);
+    font-size:clamp(25px,2.5vw,34px);
 
     font-weight:600;
     line-height:1.15;
@@ -6984,7 +6945,7 @@ footer{
 .usg-department-title p{
     margin:0;
 
-    color:#777169;
+    color:#817a71;
 
     font-family:"Inter",sans-serif;
     font-size:8px;
@@ -6995,10 +6956,12 @@ footer{
 
 
 /* =========================================
-   PEOPLE GRID
+   PEOPLE
 ========================================= */
 
 .usg-people{
+    margin-top:auto;
+
     display:grid;
 
     grid-template-columns:repeat(3,minmax(0,1fr));
@@ -7015,24 +6978,25 @@ footer{
     min-width:0;
 }
 
+
+/* =========================================
+   RECTANGULAR PORTRAITS
+========================================= */
+
 .usg-photo{
     width:100%;
-    aspect-ratio:1 / 1;
+    aspect-ratio:4 / 5;
 
     overflow:hidden;
 
-    border:1px solid rgba(199,166,90,.22);
+    border-radius:0;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(127,29,45,.12),
-            rgba(18,18,18,.98)
-        );
+    border:1px solid rgba(199,166,90,.28);
+
+    background:var(--black-3);
 
     position:relative;
 }
-
 
 .usg-photo::after{
     content:"";
@@ -7045,7 +7009,6 @@ footer{
     pointer-events:none;
 }
 
-
 .usg-photo img{
     width:100%;
     height:100%;
@@ -7057,13 +7020,13 @@ footer{
     filter:saturate(.72);
 
     transition:
-        transform .45s ease,
-        filter .45s ease;
+        transform .4s ease,
+        filter .4s ease;
 }
 
 
 /* =========================================
-   PERSON INFORMATION
+   PERSON INFO
 ========================================= */
 
 .usg-person-info{
@@ -7073,7 +7036,7 @@ footer{
 .usg-person-info span{
     display:block;
 
-    margin-bottom:3px;
+    margin-bottom:4px;
 
     color:var(--gold);
 
@@ -7081,13 +7044,13 @@ footer{
     font-size:7px;
     font-weight:800;
 
-    letter-spacing:1.6px;
+    letter-spacing:1.8px;
 }
 
 .usg-person-info strong{
     display:block;
 
-    color:#d8d1c5;
+    color:#aaa397;
 
     font-family:"Inter",sans-serif;
     font-size:10px;
@@ -7103,14 +7066,10 @@ footer{
 
 .usg-person.usg-head .usg-photo{
     border-color:rgba(199,166,90,.5);
-
-    box-shadow:
-        inset 0 0 0 1px rgba(199,166,90,.05);
 }
 
 .usg-person.usg-head .usg-person-info strong{
     color:var(--ivory);
-    font-size:11px;
 }
 
 
@@ -7119,33 +7078,32 @@ footer{
 ========================================= */
 
 .usg-department:hover{
-    transform:translateY(-7px);
+    transform:translateY(-8px);
 
-    border-color:rgba(199,166,90,.55);
+    border-color:rgba(199,166,90,.6);
 
     background:
         linear-gradient(
             145deg,
-            rgba(127,29,45,.12),
-            rgba(8,8,8,.98) 72%
+            rgba(127,29,45,.14),
+            rgba(8,8,8,.98) 70%
         );
 
     box-shadow:
-        0 24px 55px rgba(0,0,0,.4),
+        0 25px 55px rgba(0,0,0,.4),
         0 0 30px rgba(199,166,90,.06);
 }
 
 .usg-department:hover::before{
-    width:170px;
+    width:160px;
 }
 
 .usg-department:hover::after{
-    transform:scale(1.45);
+    transform:scale(1.5);
 }
 
 .usg-person:hover .usg-photo img{
-    transform:scale(1.06);
-
+    transform:scale(1.07);
     filter:saturate(1);
 }
 
@@ -7157,77 +7115,66 @@ footer{
 @media(max-width:700px){
 
     .usg-section{
-        padding:85px 6%;
-    }
-
-    .usg-heading{
-        margin-bottom:48px;
-    }
-
-    .usg-heading h2{
-        font-size:clamp(32px,9vw,48px);
-    }
-
-    .usg-heading > p:last-child{
-        font-size:12px;
+        padding:20px 0 85px;
     }
 
     .usg-directory{
         grid-template-columns:1fr;
-        gap:18px;
+        gap:16px;
     }
 
     .usg-department{
-        padding:25px 22px;
+        min-height:330px;
+        padding:27px 24px;
     }
 
     .usg-department-top{
-        margin-bottom:27px;
+        margin-bottom:35px;
     }
 
     .usg-department-title{
-        margin-bottom:21px;
+        margin-bottom:27px;
     }
 
     .usg-department-title h3{
-        font-size:25px;
+        font-size:27px;
     }
 
     .usg-people{
         gap:12px;
     }
 
+    .usg-photo{
+        aspect-ratio:4 / 5;
+    }
+
     .usg-person-info strong{
-        font-size:9px;
+        font-size:10px;
     }
 
     .usg-person.usg-head .usg-person-info strong{
-        font-size:10px;
+        font-size:11px;
     }
 }
 
 
+/* =========================================
+   SMALL PHONES
+========================================= */
+
 @media(max-width:400px){
 
-    .usg-section{
-        padding-left:5%;
-        padding-right:5%;
-    }
-
     .usg-department{
-        padding:23px 19px;
+        min-height:315px;
+        padding:24px 20px;
     }
 
     .usg-department-title h3{
-        font-size:22px;
+        font-size:24px;
     }
 
     .usg-people{
         gap:9px;
-    }
-
-    .usg-person-info{
-        padding-top:8px;
     }
 
     .usg-person-info span{
@@ -7237,902 +7184,4 @@ footer{
     .usg-person-info strong{
         font-size:8px;
     }
-
-    .usg-person.usg-head .usg-person-info strong{
-        font-size:9px;
-    }
-}
-
-/* =========================================
-   USG DIRECTORY — LARGE EDITORIAL PORTRAITS
-========================================= */
-
-.usg-section{
-    position:relative;
-    padding:120px 8%;
-    overflow:hidden;
-}
-
-
-/* =========================================
-   HEADING
-========================================= */
-
-.usg-heading{
-    width:100%;
-    max-width:900px;
-    margin:0 auto 75px;
-    text-align:center;
-}
-
-.usg-heading .eyebrow{
-    text-align:center;
-}
-
-.usg-heading h2{
-    margin:0 0 22px;
-
-    color:var(--ivory);
-
-    font-family:"Cinzel",serif;
-    font-size:clamp(42px,5vw,68px);
-    font-weight:600;
-    line-height:1.05;
-}
-
-.usg-heading h2 em{
-    color:var(--gold);
-    font-style:normal;
-}
-
-.usg-heading > p:last-child{
-    max-width:680px;
-    margin:0 auto;
-
-    color:var(--muted);
-
-    font-family:"Inter",sans-serif;
-    font-size:14px;
-    line-height:1.8;
-}
-
-
-/* =========================================
-   DEPARTMENT GRID
-========================================= */
-
-.usg-directory{
-    width:100%;
-    max-width:1250px;
-    margin:0 auto;
-
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-
-    gap:30px;
-}
-
-
-/* =========================================
-   DEPARTMENT CARD
-========================================= */
-
-.usg-department{
-    position:relative;
-
-    padding:36px;
-
-    border:1px solid rgba(199,166,90,.25);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(20,20,20,.98),
-            rgba(7,7,7,.99)
-        );
-
-    overflow:hidden;
-
-    transition:
-        transform .35s ease,
-        border-color .35s ease,
-        box-shadow .35s ease,
-        background .35s ease;
-}
-
-.usg-department::before{
-    content:"";
-
-    position:absolute;
-    top:0;
-    left:0;
-
-    width:110px;
-    height:2px;
-
-    background:var(--gold);
-
-    transition:width .4s ease;
-}
-
-.usg-department::after{
-    content:"";
-
-    position:absolute;
-
-    width:300px;
-    height:300px;
-
-    right:-170px;
-    bottom:-170px;
-
-    border-radius:50%;
-
-    background:rgba(127,29,45,.15);
-
-    filter:blur(50px);
-
-    pointer-events:none;
-}
-
-
-/* =========================================
-   TOP
-========================================= */
-
-.usg-department-top{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    margin-bottom:32px;
-}
-
-.usg-department-top > span{
-    color:rgba(199,166,90,.55);
-
-    font-family:"Cinzel",serif;
-    font-size:15px;
-
-    letter-spacing:2px;
-}
-
-.usg-department-top small{
-    color:var(--gold);
-
-    font-family:"Inter",sans-serif;
-    font-size:9px;
-    font-weight:800;
-
-    letter-spacing:2.5px;
-}
-
-
-/* =========================================
-   DEPARTMENT TITLE
-========================================= */
-
-.usg-department-title{
-    padding-bottom:24px;
-    margin-bottom:28px;
-
-    border-bottom:1px solid rgba(199,166,90,.18);
-}
-
-.usg-department-title h3{
-    margin:0 0 9px;
-
-    color:var(--ivory);
-
-    font-family:"Cinzel",serif;
-    font-size:clamp(28px,2.7vw,38px);
-
-    font-weight:600;
-    line-height:1.1;
-}
-
-.usg-department-title p{
-    margin:0;
-
-    color:#817a71;
-
-    font-family:"Inter",sans-serif;
-    font-size:9px;
-    font-weight:700;
-
-    letter-spacing:2.2px;
-}
-
-
-/* =========================================
-   PEOPLE
-========================================= */
-
-.usg-people{
-    display:grid;
-
-    grid-template-columns:repeat(3,minmax(0,1fr));
-
-    gap:18px;
-}
-
-
-/* =========================================
-   LARGE RECTANGULAR PHOTO
-========================================= */
-
-.usg-photo{
-    width:100%;
-    aspect-ratio:4 / 5;
-
-    overflow:hidden;
-
-    border:1px solid rgba(199,166,90,.28);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(127,29,45,.12),
-            rgba(18,18,18,.98)
-        );
-
-    position:relative;
-}
-
-.usg-photo::after{
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    border:1px solid rgba(255,255,255,.035);
-
-    pointer-events:none;
-}
-
-.usg-photo img{
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:cover;
-
-    filter:saturate(.72);
-
-    transition:
-        transform .45s ease,
-        filter .45s ease;
-}
-
-
-/* =========================================
-   PERSON TEXT
-========================================= */
-
-.usg-person-info{
-    padding-top:13px;
-}
-
-.usg-person-info span{
-    display:block;
-
-    margin-bottom:5px;
-
-    color:var(--gold);
-
-    font-family:"Inter",sans-serif;
-    font-size:8px;
-    font-weight:800;
-
-    letter-spacing:1.8px;
-}
-
-.usg-person-info strong{
-    display:block;
-
-    color:#ddd6ca;
-
-    font-family:"Inter",sans-serif;
-    font-size:13px;
-    font-weight:600;
-
-    line-height:1.35;
-}
-
-
-/* =========================================
-   HEAD
-========================================= */
-
-.usg-person.usg-head .usg-photo{
-    border-color:rgba(199,166,90,.55);
-
-    box-shadow:
-        inset 0 0 0 1px rgba(199,166,90,.06);
-}
-
-.usg-person.usg-head .usg-person-info strong{
-    color:var(--ivory);
-    font-size:14px;
-}
-
-
-/* =========================================
-   HOVER
-========================================= */
-
-.usg-department:hover{
-    transform:translateY(-8px);
-
-    border-color:rgba(199,166,90,.58);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(127,29,45,.12),
-            rgba(7,7,7,.99) 72%
-        );
-
-    box-shadow:
-        0 28px 60px rgba(0,0,0,.45),
-        0 0 30px rgba(199,166,90,.07);
-}
-
-.usg-department:hover::before{
-    width:190px;
-}
-
-.usg-person:hover .usg-photo img{
-    transform:scale(1.055);
-    filter:saturate(1);
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media(max-width:700px){
-
-    .usg-section{
-        padding:90px 6%;
-    }
-
-    .usg-heading{
-        margin-bottom:55px;
-    }
-
-    .usg-heading h2{
-        font-size:clamp(36px,10vw,52px);
-    }
-
-    .usg-heading > p:last-child{
-        font-size:13px;
-    }
-
-    .usg-directory{
-        grid-template-columns:1fr;
-        gap:22px;
-    }
-
-    .usg-department{
-        padding:28px 24px;
-    }
-
-    .usg-department-top{
-        margin-bottom:28px;
-    }
-
-    .usg-department-title{
-        margin-bottom:25px;
-    }
-
-    .usg-department-title h3{
-        font-size:29px;
-    }
-
-    .usg-department-title p{
-        font-size:8px;
-    }
-
-    .usg-people{
-        gap:14px;
-    }
-
-    .usg-person-info strong{
-        font-size:11px;
-    }
-
-    .usg-person.usg-head .usg-person-info strong{
-        font-size:12px;
-    }
-}
-
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media(max-width:400px){
-
-    .usg-section{
-        padding-left:5%;
-        padding-right:5%;
-    }
-
-    .usg-department{
-        padding:25px 20px;
-    }
-
-    .usg-department-title h3{
-        font-size:25px;
-    }
-
-    .usg-people{
-        gap:10px;
-    }
-
-    .usg-person-info{
-        padding-top:10px;
-    }
-
-    .usg-person-info span{
-        font-size:7px;
-    }
-
-    .usg-person-info strong{
-        font-size:9px;
-    }
-
-    .usg-person.usg-head .usg-person-info strong{
-        font-size:10px;
-    }
-}
-
-/* =========================================
-   USG DIRECTORY — LARGE EDITORIAL PORTRAITS
-========================================= */
-
-.usg-section{
-    position:relative;
-    padding:120px 8%;
-    overflow:hidden;
-}
-
-
-/* =========================================
-   HEADING
-========================================= */
-
-.usg-heading{
-    width:100%;
-    max-width:900px;
-    margin:0 auto 75px;
-    text-align:center;
-}
-
-.usg-heading .eyebrow{
-    text-align:center;
-}
-
-.usg-heading h2{
-    margin:0 0 22px;
-
-    color:var(--ivory);
-
-    font-family:"Cinzel",serif;
-    font-size:clamp(42px,5vw,68px);
-    font-weight:600;
-    line-height:1.05;
-}
-
-.usg-heading h2 em{
-    color:var(--gold);
-    font-style:normal;
-}
-
-.usg-heading > p:last-child{
-    max-width:680px;
-    margin:0 auto;
-
-    color:var(--muted);
-
-    font-family:"Inter",sans-serif;
-    font-size:14px;
-    line-height:1.8;
-}
-
-
-/* =========================================
-   DEPARTMENT GRID
-========================================= */
-
-.usg-directory{
-    width:100%;
-    max-width:1250px;
-    margin:0 auto;
-
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-
-    gap:30px;
-}
-
-
-/* =========================================
-   DEPARTMENT CARD
-========================================= */
-
-.usg-department{
-    position:relative;
-
-    padding:36px;
-
-    border:1px solid rgba(199,166,90,.25);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(20,20,20,.98),
-            rgba(7,7,7,.99)
-        );
-
-    overflow:hidden;
-
-    transition:
-        transform .35s ease,
-        border-color .35s ease,
-        box-shadow .35s ease,
-        background .35s ease;
-}
-
-.usg-department::before{
-    content:"";
-
-    position:absolute;
-    top:0;
-    left:0;
-
-    width:110px;
-    height:2px;
-
-    background:var(--gold);
-
-    transition:width .4s ease;
-}
-
-.usg-department::after{
-    content:"";
-
-    position:absolute;
-
-    width:300px;
-    height:300px;
-
-    right:-170px;
-    bottom:-170px;
-
-    border-radius:50%;
-
-    background:rgba(127,29,45,.15);
-
-    filter:blur(50px);
-
-    pointer-events:none;
-}
-
-
-/* =========================================
-   TOP
-========================================= */
-
-.usg-department-top{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    margin-bottom:32px;
-}
-
-.usg-department-top > span{
-    color:rgba(199,166,90,.55);
-
-    font-family:"Cinzel",serif;
-    font-size:15px;
-
-    letter-spacing:2px;
-}
-
-.usg-department-top small{
-    color:var(--gold);
-
-    font-family:"Inter",sans-serif;
-    font-size:9px;
-    font-weight:800;
-
-    letter-spacing:2.5px;
-}
-
-
-/* =========================================
-   DEPARTMENT TITLE
-========================================= */
-
-.usg-department-title{
-    padding-bottom:24px;
-    margin-bottom:28px;
-
-    border-bottom:1px solid rgba(199,166,90,.18);
-}
-
-.usg-department-title h3{
-    margin:0 0 9px;
-
-    color:var(--ivory);
-
-    font-family:"Cinzel",serif;
-    font-size:clamp(28px,2.7vw,38px);
-
-    font-weight:600;
-    line-height:1.1;
-}
-
-.usg-department-title p{
-    margin:0;
-
-    color:#817a71;
-
-    font-family:"Inter",sans-serif;
-    font-size:9px;
-    font-weight:700;
-
-    letter-spacing:2.2px;
-}
-
-
-/* =========================================
-   PEOPLE
-========================================= */
-
-.usg-people{
-    display:grid;
-
-    grid-template-columns:repeat(3,minmax(0,1fr));
-
-    gap:18px;
-}
-
-
-/* =========================================
-   LARGE RECTANGULAR PHOTO
-========================================= */
-
-.usg-photo{
-    width:100%;
-    aspect-ratio:4 / 5;
-
-    overflow:hidden;
-
-    border:1px solid rgba(199,166,90,.28);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(127,29,45,.12),
-            rgba(18,18,18,.98)
-        );
-
-    position:relative;
-}
-
-.usg-photo::after{
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    border:1px solid rgba(255,255,255,.035);
-
-    pointer-events:none;
-}
-
-.usg-photo img{
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:cover;
-
-    filter:saturate(.72);
-
-    transition:
-        transform .45s ease,
-        filter .45s ease;
-}
-
-
-/* =========================================
-   PERSON TEXT
-========================================= */
-
-.usg-person-info{
-    padding-top:13px;
-}
-
-.usg-person-info span{
-    display:block;
-
-    margin-bottom:5px;
-
-    color:var(--gold);
-
-    font-family:"Inter",sans-serif;
-    font-size:8px;
-    font-weight:800;
-
-    letter-spacing:1.8px;
-}
-
-.usg-person-info strong{
-    display:block;
-
-    color:#ddd6ca;
-
-    font-family:"Inter",sans-serif;
-    font-size:13px;
-    font-weight:600;
-
-    line-height:1.35;
-}
-
-
-/* =========================================
-   HEAD
-========================================= */
-
-.usg-person.usg-head .usg-photo{
-    border-color:rgba(199,166,90,.55);
-
-    box-shadow:
-        inset 0 0 0 1px rgba(199,166,90,.06);
-}
-
-.usg-person.usg-head .usg-person-info strong{
-    color:var(--ivory);
-    font-size:14px;
-}
-
-
-/* =========================================
-   HOVER
-========================================= */
-
-.usg-department:hover{
-    transform:translateY(-8px);
-
-    border-color:rgba(199,166,90,.58);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(127,29,45,.12),
-            rgba(7,7,7,.99) 72%
-        );
-
-    box-shadow:
-        0 28px 60px rgba(0,0,0,.45),
-        0 0 30px rgba(199,166,90,.07);
-}
-
-.usg-department:hover::before{
-    width:190px;
-}
-
-.usg-person:hover .usg-photo img{
-    transform:scale(1.055);
-    filter:saturate(1);
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media(max-width:700px){
-
-    .usg-section{
-        padding:90px 6%;
-    }
-
-    .usg-heading{
-        margin-bottom:55px;
-    }
-
-    .usg-heading h2{
-        font-size:clamp(36px,10vw,52px);
-    }
-
-    .usg-heading > p:last-child{
-        font-size:13px;
-    }
-
-    .usg-directory{
-        grid-template-columns:1fr;
-        gap:22px;
-    }
-
-    .usg-department{
-        padding:28px 24px;
-    }
-
-    .usg-department-top{
-        margin-bottom:28px;
-    }
-
-    .usg-department-title{
-        margin-bottom:25px;
-    }
-
-    .usg-department-title h3{
-        font-size:29px;
-    }
-
-    .usg-department-title p{
-        font-size:8px;
-    }
-
-    .usg-people{
-        gap:14px;
-    }
-
-    .usg-person-info strong{
-        font-size:11px;
-    }
-
-    .usg-person.usg-head .usg-person-info strong{
-        font-size:12px;
-    }
-}
-
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media(max-width:400px){
-
-    .usg-section{
-        padding-left:5%;
-        padding-right:5%;
-    }
-
-    .usg-department{
-        padding:25px 20px;
-    }
-
-    .usg-department-title h3{
-        font-size:25px;
-    }
-
-    .usg-people{
-        gap:10px;
-    }
-
-    .usg-person-info{
-        padding-top:10px;
-    }
-
-    .usg-person-info span{
-        font-size:7px;
-    }
-
-    .usg-person-info strong{
-        font-size:9px;
-    }
-
-    .usg-person.usg-head .usg-person-info strong{
-        font-size:10px;
-    }
-}
+}}
