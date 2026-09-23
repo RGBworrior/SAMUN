@@ -6157,7 +6157,7 @@ footer{
     align-items: flex-end;
     gap: 60px;
 
-    margin: 90px 0 50px 17%;
+    margin: 90px 0 50px 14%;
     padding-bottom: 30px;
 
     border-bottom: 1px solid var(--line);
@@ -6338,7 +6338,6 @@ footer{
     gap: 16px;
 
     margin-top: 35px;
-    transform: translateX(150px);
 }
 
 
@@ -6384,6 +6383,7 @@ footer{
     background: var(--black-3);
 
     border-bottom: 1px solid rgba(199,166,90,.2);
+    transform: translateX(50px);
 }
 
 .usg-photo img {
