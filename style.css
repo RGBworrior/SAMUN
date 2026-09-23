@@ -6742,127 +6742,6 @@ footer{
 }
 
 /* =========================================
-   SECRETARIAT — MOBILE
-   NO HORIZONTAL SCROLL
-========================================= */
-
-@media (max-width: 600px){
-
-    .secretariat-section{
-        width:100%;
-        max-width:100%;
-        overflow:hidden;
-    }
-
-    .secretariat-leadership{
-        width:100%;
-        max-width:100%;
-        margin:0 0 55px;
-
-        display:grid;
-        grid-template-columns:1fr;
-    }
-
-    .leadership-member{
-        width:100%;
-        min-width:0;
-        box-sizing:border-box;
-
-        padding:24px 16px;
-
-        display:grid;
-        grid-template-columns:28px 82px minmax(0,1fr);
-        gap:12px;
-
-        overflow:hidden;
-    }
-
-    .leadership-number{
-        min-width:0;
-    }
-
-    .leadership-photo{
-        width:82px;
-        height:105px;
-        min-width:0;
-    }
-
-    .leadership-info{
-        min-width:0;
-        width:100%;
-        overflow:hidden;
-    }
-
-    .leadership-info h3{
-        margin:0 0 6px;
-
-        font-size:16px;
-        line-height:1.2;
-
-        /* Prevent long names from causing overflow */
-        overflow-wrap:anywhere;
-        word-break:break-word;
-    }
-
-    .leadership-role{
-        font-size:6.5px;
-        letter-spacing:1.5px;
-
-        white-space:normal;
-        overflow-wrap:anywhere;
-    }
-
-    .leadership-info p{
-        width:100%;
-        max-width:100%;
-
-        font-size:9px;
-        line-height:1.5;
-
-        overflow-wrap:anywhere;
-        word-break:break-word;
-    }
-
-    .leadership-mark{
-        right:10px;
-        bottom:10px;
-    }
-}
-
-
-/* =========================================
-   VERY SMALL PHONES
-========================================= */
-
-@media (max-width:400px){
-
-    .leadership-member{
-        padding:20px 12px;
-
-        grid-template-columns:24px 72px minmax(0,1fr);
-        gap:10px;
-    }
-
-    .leadership-photo{
-        width:72px;
-        height:95px;
-    }
-
-    .leadership-info h3{
-        font-size:14px;
-    }
-
-    .leadership-role{
-        font-size:6px;
-        letter-spacing:1.2px;
-    }
-
-    .leadership-info p{
-        font-size:8px;
-    }
-}
-
-/* =========================================
    USG — MOBILE
    NO HORIZONTAL SCROLL
 ========================================= */
@@ -6960,7 +6839,7 @@ footer{
     .usg-photo,
     .usg-person.usg-head .usg-photo{
         width:100%;
-        height:170px;
+        height:220px;
     }
 
     .usg-person-info,
