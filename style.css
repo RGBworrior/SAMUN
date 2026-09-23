@@ -6157,7 +6157,7 @@ footer{
     align-items: flex-end;
     gap: 60px;
 
-    margin: 90px 0 50px 4%;
+    margin: 90px 0 50px 10%;
     padding-bottom: 30px;
 
     border-bottom: 1px solid var(--line);
@@ -6338,6 +6338,7 @@ footer{
     gap: 16px;
 
     margin-top: 35px;
+    transform: translateX(50px);
 }
 
 
