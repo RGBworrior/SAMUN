@@ -7185,3 +7185,576 @@ footer{
         font-size:8px;
     }
 }}
+/* =========================================
+   USG SECTION
+   SAME STYLE AS SENIOR LEADERSHIP
+========================================= */
+
+.usg-section{
+    width:100%;
+    max-width:1150px;
+    margin:0 auto 105px;
+}
+
+
+/* Header */
+
+.usg-header{
+    width:100%;
+    max-width:1150px;
+    margin:0 auto 45px;
+
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+
+    gap:40px;
+
+    padding-bottom:22px;
+
+    border-bottom:1px solid rgba(199,166,90,.25);
+}
+
+.usg-header > div span{
+    display:block;
+
+    margin-bottom:10px;
+
+    color:rgba(199,166,90,.5);
+
+    font-family:"Inter",sans-serif;
+
+    font-size:8px;
+    font-weight:800;
+
+    letter-spacing:2.5px;
+}
+
+.usg-header h3{
+    margin:0;
+
+    color:var(--ivory);
+
+    font-family:"Cinzel",serif;
+
+    font-size:32px;
+
+    font-weight:600;
+
+    line-height:1.2;
+}
+
+.usg-header p{
+    max-width:330px;
+
+    margin:0;
+
+    color:#88827a;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:11px;
+
+    line-height:1.7;
+
+    text-align:right;
+}
+
+
+/* =========================================
+   USG GRID
+========================================= */
+
+.usg-directory{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    border-top:1px solid rgba(199,166,90,.16);
+}
+
+
+/* =========================================
+   DEPARTMENT CARD
+========================================= */
+
+.usg-department{
+    position:relative;
+
+    min-height:330px;
+
+    padding:32px 38px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    border-bottom:1px solid rgba(199,166,90,.16);
+
+    background:transparent;
+
+    transition:
+        background .35s ease,
+        transform .35s ease;
+}
+
+
+/* Vertical divider */
+
+.usg-department:nth-child(odd){
+    border-right:1px solid rgba(199,166,90,.16);
+}
+
+
+/* =========================================
+   TOP LINE
+========================================= */
+
+.usg-department-top{
+    display:flex;
+
+    align-items:flex-start;
+
+    justify-content:space-between;
+
+    margin-bottom:38px;
+}
+
+.usg-department-top span{
+    color:rgba(199,166,90,.45);
+
+    font-family:"Cinzel",serif;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+}
+
+.usg-department-top small{
+    color:var(--gold);
+
+    font-family:"Inter",sans-serif;
+
+    font-size:7px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================
+   DEPARTMENT TITLE
+========================================= */
+
+.usg-department-title{
+    margin-bottom:30px;
+}
+
+.usg-department-title h3{
+    margin:0 0 8px;
+
+    color:var(--ivory);
+
+    font-family:"Cinzel",serif;
+
+    font-size:28px;
+
+    font-weight:600;
+
+    line-height:1.15;
+}
+
+.usg-department-title p{
+    margin:0;
+
+    color:#817a71;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:8px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================
+   PEOPLE
+========================================= */
+
+.usg-people{
+    margin-top:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+}
+
+
+/* =========================================
+   PERSON
+========================================= */
+
+.usg-person{
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding-top:16px;
+
+    border-top:1px solid rgba(199,166,90,.12);
+}
+
+.usg-person:first-child{
+    padding-top:0;
+
+    border-top:none;
+}
+
+
+/* =========================================
+   RECTANGULAR PORTRAIT
+========================================= */
+
+.usg-photo{
+    width:72px;
+    height:82px;
+
+    flex:0 0 72px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:#111;
+
+    border:1px solid rgba(199,166,90,.28);
+}
+
+
+/* Inner frame */
+
+.usg-photo::before{
+    content:"";
+
+    position:absolute;
+
+    inset:6px;
+
+    border:1px solid rgba(199,166,90,.15);
+
+    z-index:2;
+
+    pointer-events:none;
+}
+
+
+.usg-photo img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    filter:saturate(.75);
+
+    transition:
+        transform .5s ease,
+        filter .5s ease;
+}
+
+
+/* =========================================
+   PERSON INFO
+========================================= */
+
+.usg-person-info{
+    min-width:0;
+}
+
+.usg-person-info span{
+    display:block;
+
+    margin-bottom:5px;
+
+    color:var(--gold);
+
+    font-family:"Inter",sans-serif;
+
+    font-size:7px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.usg-person-info strong{
+    display:block;
+
+    color:var(--ivory);
+
+    font-family:"Inter",sans-serif;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    line-height:1.4;
+}
+
+
+/* =========================================
+   HEAD
+========================================= */
+
+.usg-person.usg-head{
+    padding-bottom:16px;
+
+    border-bottom:1px solid rgba(199,166,90,.15);
+}
+
+.usg-person.usg-head .usg-photo{
+    width:82px;
+    height:94px;
+
+    flex-basis:82px;
+
+    border-color:rgba(199,166,90,.42);
+}
+
+.usg-person.usg-head .usg-person-info strong{
+    font-size:13px;
+}
+
+
+/* =========================================
+   MEMBERS
+========================================= */
+
+.usg-person:not(.usg-head){
+    border-top:none;
+
+    padding-top:0;
+}
+
+
+/* Put members side-by-side where possible */
+
+.usg-people{
+    position:relative;
+}
+
+.usg-people .usg-person:not(.usg-head){
+    display:inline-flex;
+
+    width:calc(50% - 9px);
+
+    vertical-align:top;
+
+    margin-right:14px;
+}
+
+.usg-people .usg-person:not(.usg-head):last-child{
+    margin-right:0;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.usg-department{
+    overflow:hidden;
+}
+
+.usg-department::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:70px;
+    height:2px;
+
+    background:var(--gold);
+
+    transition:width .4s ease;
+}
+
+.usg-department::after{
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    right:-130px;
+    bottom:-130px;
+
+    border-radius:50%;
+
+    background:rgba(127,29,45,.10);
+
+    filter:blur(30px);
+
+    pointer-events:none;
+
+    transition:transform .5s ease;
+}
+
+
+.usg-department:hover{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(127,29,45,.12),
+            rgba(199,166,90,.025)
+        );
+}
+
+.usg-department:hover::before{
+    width:150px;
+}
+
+.usg-department:hover::after{
+    transform:scale(1.4);
+}
+
+.usg-department:hover .usg-photo img{
+    transform:scale(1.05);
+
+    filter:saturate(1);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:700px){
+
+    .usg-section{
+        margin-bottom:80px;
+    }
+
+    .usg-header{
+        display:block;
+
+        margin-bottom:35px;
+
+        padding-bottom:20px;
+    }
+
+    .usg-header h3{
+        font-size:27px;
+    }
+
+    .usg-header p{
+        max-width:420px;
+
+        margin-top:14px;
+
+        text-align:left;
+
+        font-size:10px;
+    }
+
+
+    .usg-directory{
+        grid-template-columns:1fr;
+    }
+
+    .usg-department{
+        min-height:310px;
+
+        padding:28px 24px;
+    }
+
+    .usg-department:nth-child(odd){
+        border-right:none;
+    }
+
+    .usg-department-title h3{
+        font-size:25px;
+    }
+
+    .usg-photo{
+        width:64px;
+        height:74px;
+
+        flex-basis:64px;
+    }
+
+    .usg-person.usg-head .usg-photo{
+        width:72px;
+        height:84px;
+
+        flex-basis:72px;
+    }
+
+    .usg-person-info strong{
+        font-size:11px;
+    }
+
+    .usg-person.usg-head .usg-person-info strong{
+        font-size:12px;
+    }
+
+    .usg-people .usg-person:not(.usg-head){
+        width:100%;
+
+        margin-right:0;
+
+        margin-bottom:10px;
+    }
+}
+
+
+@media(max-width:400px){
+
+    .usg-department{
+        min-height:295px;
+
+        padding:24px 20px;
+    }
+
+    .usg-header h3{
+        font-size:24px;
+    }
+
+    .usg-department-title h3{
+        font-size:23px;
+    }
+
+    .usg-photo{
+        width:58px;
+        height:68px;
+
+        flex-basis:58px;
+    }
+
+    .usg-person.usg-head .usg-photo{
+        width:66px;
+        height:78px;
+
+        flex-basis:66px;
+    }
+}
