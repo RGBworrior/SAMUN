@@ -7090,3 +7090,18 @@ footer{
     margin-left: 4%;
     margin-right: auto;
 }
+
+.principal-desk-heading{
+    display:block !important;
+    width:100% !important;
+    max-width:800px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    text-align:center !important;
+}
+
+.principal-desk-heading h2,
+.principal-desk-heading .eyebrow{
+    width:100%;
+    text-align:center !important;
+}
