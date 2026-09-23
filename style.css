@@ -6903,3 +6903,199 @@ footer{
     margin-left: 4%;
     margin-right: auto;
 }
+
+/* =========================================================
+   LEADERSHIP — MOBILE OPTIMISATION
+   Prominent editorial portraits
+========================================================= */
+
+@media (max-width: 700px){
+
+    .secretariat-leadership{
+        width:100%;
+        max-width:100%;
+        margin:0 auto 70px;
+
+        grid-template-columns:1fr;
+
+        border-top:1px solid rgba(199,166,90,.25);
+    }
+
+    .leadership-member{
+        width:100%;
+        min-height:0;
+        box-sizing:border-box;
+
+        padding:28px 18px;
+
+        display:grid;
+
+        /* number | prominent photo | information */
+        grid-template-columns:28px 115px minmax(0,1fr);
+
+        align-items:center;
+
+        gap:18px;
+
+        border-right:none !important;
+        border-bottom:1px solid rgba(199,166,90,.16);
+
+        overflow:hidden;
+    }
+
+
+    /* =========================================
+       NUMBER
+    ========================================= */
+
+    .leadership-number{
+        align-self:start;
+
+        padding-top:3px;
+
+        font-size:10px;
+        letter-spacing:1.5px;
+    }
+
+
+    /* =========================================
+       PROMINENT PHOTO
+    ========================================= */
+
+    .leadership-photo{
+        width:115px;
+        height:155px;
+
+        flex-shrink:0;
+
+        border:1px solid rgba(199,166,90,.35);
+    }
+
+    .leadership-photo::before{
+        inset:6px;
+    }
+
+
+    /* =========================================
+       INFORMATION
+    ========================================= */
+
+    .leadership-info{
+        min-width:0;
+        width:100%;
+    }
+
+    .leadership-role{
+        margin-bottom:8px;
+
+        font-size:7px;
+        letter-spacing:1.8px;
+
+        line-height:1.4;
+    }
+
+    .leadership-info h3{
+        margin:0 0 8px;
+
+        font-size:19px;
+        line-height:1.2;
+
+        overflow-wrap:anywhere;
+    }
+
+    .leadership-info p{
+        max-width:100%;
+
+        font-size:10px;
+        line-height:1.6;
+    }
+
+
+    /* =========================================
+       ARROW
+    ========================================= */
+
+    .leadership-mark{
+        right:12px;
+        bottom:12px;
+
+        font-size:15px;
+    }
+
+
+    /* Disable large desktop movement on touch */
+    .leadership-member:hover{
+        transform:none;
+    }
+
+    .leadership-member:hover .leadership-photo img{
+        transform:none;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width:480px){
+
+    .secretariat-leadership{
+        margin-bottom:60px;
+    }
+
+    .leadership-member{
+        padding:24px 12px;
+
+        grid-template-columns:22px 105px minmax(0,1fr);
+
+        gap:14px;
+    }
+
+    .leadership-photo{
+        width:105px;
+        height:145px;
+    }
+
+    .leadership-info h3{
+        font-size:17px;
+    }
+
+    .leadership-role{
+        font-size:6.5px;
+        letter-spacing:1.5px;
+    }
+
+    .leadership-info p{
+        font-size:9px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width:360px){
+
+    .leadership-member{
+        padding:22px 8px;
+
+        grid-template-columns:20px 95px minmax(0,1fr);
+
+        gap:11px;
+    }
+
+    .leadership-photo{
+        width:95px;
+        height:135px;
+    }
+
+    .leadership-info h3{
+        font-size:15px;
+    }
+
+    .leadership-info p{
+        font-size:8.5px;
+    }
+}
