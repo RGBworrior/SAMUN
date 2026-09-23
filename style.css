@@ -5777,7 +5777,7 @@ footer{
     }
 
     .principal-desk-heading{
-        margin-bottom:40px;
+        margin-bottom:55px;
     }
 
     .principal-desk-heading h2{
@@ -5786,7 +5786,7 @@ footer{
 
     .principal-desk-content{
         grid-template-columns:1fr;
-        gap:40px;
+        gap:20px;
     }
 
     .principal-desk-image{
