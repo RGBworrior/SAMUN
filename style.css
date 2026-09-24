@@ -2241,18 +2241,24 @@ footer{
    SAVE THE DATE — HERO CARD
 ======================================== */
 
-.save-date-card { 
-    position: absolute; 
-    top: 90%; right: -60%; 
-    transform: translate(50%,-240%); 
-    width: 400px; 
-    margin: 0; 
-    z-index: 5; 
-    padding: 18px 22px; 
-    border: 1px solid rgba(199,166,90,.35); 
-    background: linear-gradient( 135deg, rgba(25,25,25,.88), rgba(8,8,8,.96) ); 
-    box-sizing: border-box; 
+.save-date-card {
+    position: absolute;
+    top: 90%;
+    right: -60%;
+    transform: translate(50%,-240%);
+    width: 400px;
+    margin: 0;
+    z-index: 5;
+    padding: 18px 22px;
+    border: 1px solid rgba(199,166,90,.35);
+    background: linear-gradient(
+        135deg,
+        rgba(25,25,25,.88),
+        rgba(8,8,8,.96)
+    );
+    box-sizing: border-box;
 }
+
 
 /* SUBTLE GOLD CORNER */
 
@@ -2410,6 +2416,7 @@ footer{
         box-shadow: 0 0 0 rgba(199,166,90,0);
     }
 }
+
 
 @media (max-width:1200px){
     .save-date-card{
