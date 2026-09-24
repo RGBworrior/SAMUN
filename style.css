@@ -5223,21 +5223,6 @@ footer{
 
 
     /* SAVE DATE — RESET THE DESKTOP POSITION */
-    .save-date-card{
-        position:relative !important;
-        top:auto !important;
-        right:150px !important;
-        left:auto !important;
-        bottom:auto !important;
-
-        transform:none !important;
-
-        width:100% !important;
-        max-width:100% !important;
-
-        margin:25px 0 0 !important;
-    }
-
 
     /* SAMUN EMBLEM */
     .hero-emblem{
