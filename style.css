@@ -2421,14 +2421,14 @@ footer{
 @media (max-width:1200px){
     .save-date-card{
         width:350px;
-        right:5%;
+        right:auto;
     }
 }
 
 @media (max-width:900px){
     .save-date-card{
         width:320px;
-        right:3%;
+        right:auto;
     }
 }
 
