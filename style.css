@@ -2247,12 +2247,13 @@ footer{
 .save-date-card {
     position: absolute;
 
-    top: 100%;
+    bottom: calc(100% + 25px);
     left: 50%;
 
     transform: translateX(-50%);
 
     width: clamp(280px, 27vw, 400px);
+    min-height: 180px;
 
     margin: 0;
     z-index: 5;
