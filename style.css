@@ -2244,11 +2244,10 @@ footer{
 .save-date-card {
     position: absolute;
 
-    top: auto;
-    right: 0;
-    bottom: 35px;
+    top: 100%;
+    left: 50%;
 
-    transform: none;
+    transform: translateX(-50%);
 
     width: clamp(280px, 27vw, 400px);
 
