@@ -2245,8 +2245,8 @@ footer{
     position: absolute;
 
     /* Responsive positioning */
-    top: 50%;
-    right: clamp(30px, 7vw, 110px);
+    top: 40%;
+    right: -60%;
 
     transform: translateY(-50%);
 
