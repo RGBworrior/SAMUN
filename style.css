@@ -2243,19 +2243,30 @@ footer{
 
 .save-date-card {
     position: absolute;
+
     top: 90%;
     right: -60%;
+
     transform: translate(50%,-240%);
-    width: 400px;
+
+    /* scales down as viewport gets narrower */
+    width: clamp(280px, 27vw, 400px);
+
     margin: 0;
+
     z-index: 5;
-    padding: 18px 22px;
+
+    padding: clamp(14px, 1.3vw, 18px)
+             clamp(16px, 1.6vw, 22px);
+
     border: 1px solid rgba(199,166,90,.35);
+
     background: linear-gradient(
         135deg,
         rgba(25,25,25,.88),
         rgba(8,8,8,.96)
     );
+
     box-sizing: border-box;
 }
 
@@ -2291,7 +2302,7 @@ footer{
 .save-date-day {
     color: var(--gold);
     font-family: "Cinzel",serif;
-    font-size: 48px;
+    font-size: clamp(38px, 3.2vw, 48px);
     font-weight: 600;
     line-height: 1;
 }
@@ -2305,7 +2316,7 @@ footer{
 .save-date-info span {
     color: var(--white);
     font-family: "Inter",sans-serif;
-    font-size: 10px;
+    font-size: clamp(8px, .7vw, 10px);
     font-weight: 600;
     letter-spacing: 1.8px;
 }
@@ -2313,7 +2324,7 @@ footer{
 .save-date-info strong {
     color: var(--muted);
     font-family: "Inter",sans-serif;
-    font-size: 11px;
+    font-size: clamp(9px, .75vw, 11px);
     font-weight: 400;
     letter-spacing: 2px;
 }
@@ -2334,13 +2345,13 @@ footer{
 .save-date-end strong {
     color: var(--white);
     font-family: "Cinzel",serif;
-    font-size: 28px;
+    font-size: clamp(23px, 1.9vw, 28px);
 }
 
 .save-date-end span {
     color: var(--muted);
     font-family: "Inter",sans-serif;
-    font-size: 9px;
+    font-size: clamp(7px, .65vw, 9px);
     letter-spacing: 1px;
 }
 
@@ -2350,7 +2361,7 @@ footer{
     border-top: 1px solid rgba(199,166,90,.12);
     color: var(--muted);
     font-family: "Inter",sans-serif;
-    font-size: 9px;
+    font-size: clamp(7px, .65vw, 9px);
     letter-spacing: 1px;
 }
 
