@@ -5226,7 +5226,7 @@ footer{
     .save-date-card{
         position:relative !important;
         top:auto !important;
-        right:auto !important;
+        right:150px !important;
         left:auto !important;
         bottom:auto !important;
 
