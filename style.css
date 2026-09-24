@@ -2244,7 +2244,7 @@ footer{
 .save-date-card {
     position: absolute;
     top: 90%;
-    right: -100%;
+    right: 6%;
     transform: translate(50%,-240%);
     width: 400px;
     margin: 0;
