@@ -2243,22 +2243,32 @@ footer{
 
 .save-date-card {
     position: absolute;
-    top: 90%;
-    right: -56%;
-    transform: translate(50%,-240%);
-    width: 400px;
+
+    /* Responsive positioning */
+    top: 50%;
+    right: clamp(30px, 7vw, 110px);
+
+    transform: translateY(-50%);
+
+    /* Responsive size */
+    width: min(400px, 32vw);
+
     margin: 0;
+
     z-index: 5;
+
     padding: 18px 22px;
+
     border: 1px solid rgba(199,166,90,.35);
+
     background: linear-gradient(
         135deg,
         rgba(25,25,25,.88),
         rgba(8,8,8,.96)
     );
+
     box-sizing: border-box;
 }
-
 
 /* SUBTLE GOLD CORNER */
 
@@ -2414,6 +2424,33 @@ footer{
     100% {
         border-color: rgba(199,166,90,.25);
         box-shadow: 0 0 0 rgba(199,166,90,0);
+    }
+}
+
+@media (max-width:1200px){
+    .save-date-card{
+        width:350px;
+        right:5%;
+    }
+}
+
+@media (max-width:900px){
+    .save-date-card{
+        width:320px;
+        right:3%;
+    }
+}
+
+@media (max-width:700px){
+    .save-date-card{
+        position:relative;
+        top:auto;
+        right:auto;
+        transform:none;
+
+        width:min(400px,100%);
+
+        margin:25px auto 0;
     }
 }
 
