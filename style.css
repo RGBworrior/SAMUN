@@ -2448,6 +2448,24 @@ footer{
     }
 }
 
+@media (max-width: 1200px) {
+    .save-date-card {
+        right: -45%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .save-date-card {
+        right: -35%;
+    }
+}
+
+@media (max-width: 800px) {
+    .save-date-card {
+        right: -25%;
+    }
+}
+
 
 /* FEATURE CARD EFFECT */
 
