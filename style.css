@@ -2418,34 +2418,6 @@ footer{
 }
 
 
-@media (max-width:1200px){
-    .save-date-card{
-        width:350px;
-        right:auto;
-    }
-}
-
-@media (max-width:900px){
-    .save-date-card{
-        width:320px;
-        right:auto;
-    }
-}
-
-@media (max-width:700px){
-    .save-date-card{
-        position:relative;
-        top:auto;
-        right:auto;
-        transform:none;
-
-        width:min(400px,100%);
-
-        margin:25px auto 0;
-    }
-}
-
-
 /* FEATURE CARD EFFECT */
 
 .feature-card {
