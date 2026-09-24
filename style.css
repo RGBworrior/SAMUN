@@ -2240,6 +2240,9 @@ footer{
 /* ========================================
    SAVE THE DATE — HERO CARD
 ======================================== */
+.hero-emblem {
+    position: relative;
+}
 
 .save-date-card {
     position: absolute;
