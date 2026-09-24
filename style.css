@@ -2247,15 +2247,16 @@ footer{
 .save-date-card {
     position: absolute;
 
-    bottom: calc(100% - 25px);
-    left: 50%;
+    top: 90%;
+    right: -60%;
 
-    transform: translateX(-50%);
+    transform: translate(50%,-240%);
 
+    /* scales down as viewport gets narrower */
     width: clamp(280px, 27vw, 400px);
-    min-height: 220px;
 
     margin: 0;
+
     z-index: 5;
 
     padding: clamp(14px, 1.3vw, 18px)
@@ -2270,6 +2271,7 @@ footer{
     );
 
     box-sizing: border-box;
+}
 }
 
 
