@@ -7133,3 +7133,400 @@ footer{
         font-size:8.5px;
     }
 }
+
+/* ========================================
+   OC ARCHIVES PAGE
+======================================== */
+
+.oc-page-hero {
+    width: 100%;
+    padding: 150px 6% 90px;
+    border-bottom: 1px solid rgba(199,166,90,.22);
+}
+
+.oc-page-hero-inner {
+    width: min(1380px, 100%);
+    margin: 0 auto;
+}
+
+.oc-page-hero .eyebrow {
+    display: block;
+    margin-bottom: 18px;
+
+    color: var(--gold);
+
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.oc-page-hero h1 {
+    margin: 0;
+
+    color: var(--ivory);
+
+    font-family: "Cinzel", serif;
+    font-size: clamp(52px, 8vw, 100px);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.oc-page-hero h1 em {
+    color: var(--crimson);
+    font-style: normal;
+}
+
+.oc-page-hero p {
+    max-width: 520px;
+    margin: 28px 0 0;
+
+    color: var(--muted);
+
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* GALLERY */
+
+.oc-gallery {
+    width: 100%;
+    padding: 100px 6% 140px;
+}
+
+.oc-gallery-inner {
+    width: min(1380px, 100%);
+    margin: 0 auto;
+}
+
+
+/* HEADING */
+
+.oc-gallery-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 60px;
+    margin-bottom: 60px;
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid rgba(199,166,90,.22);
+}
+
+.oc-gallery-heading > div::before {
+    content: "";
+
+    display: block;
+
+    width: 42px;
+    height: 2px;
+
+    margin-bottom: 18px;
+
+    background: var(--gold);
+}
+
+.oc-gallery-heading .section-eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--gold);
+
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.oc-gallery-heading h2 {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: var(--ivory);
+
+    font-family: "Cinzel", serif;
+    font-size: clamp(34px, 4.5vw, 58px);
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+.oc-gallery-heading h2 em {
+    color: var(--crimson);
+    font-style: normal;
+}
+
+.oc-gallery-heading > p {
+    max-width: 320px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* GRID */
+
+.oc-gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+
+/* CARD */
+
+.oc-gallery-item {
+    position: relative;
+
+    min-width: 0;
+
+    background: var(--black-2);
+
+    border: 1px solid rgba(199,166,90,.20);
+
+    overflow: hidden;
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease;
+}
+
+.oc-gallery-item:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(199,166,90,.55);
+}
+
+
+/* IMAGE */
+
+.oc-gallery-image {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: var(--black-3);
+}
+
+.oc-gallery-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 1px solid rgba(244,239,227,.14);
+
+    pointer-events: none;
+}
+
+.oc-gallery-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: saturate(.8);
+
+    transition:
+        transform .7s cubic-bezier(.2,.7,.2,1),
+        filter .5s ease;
+}
+
+.oc-gallery-item:hover img {
+    transform: scale(1.04);
+    filter: saturate(1);
+}
+
+
+/* GOLD DETAIL */
+
+.oc-gallery-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 59px;
+
+    width: 50px;
+    height: 2px;
+
+    background: var(--gold);
+
+    z-index: 4;
+}
+
+
+/* CAPTION */
+
+.oc-gallery-caption {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 72px;
+
+    padding: 14px 20px;
+
+    border-top: 1px solid rgba(199,166,90,.15);
+}
+
+.oc-gallery-caption > span {
+    color: rgba(199,166,90,.5);
+
+    font-family: "Cinzel", serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.oc-gallery-caption > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.oc-gallery-caption strong {
+    color: var(--ivory);
+
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.oc-gallery-caption small {
+    color: var(--muted);
+
+    font-family: "Inter", sans-serif;
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .oc-page-hero {
+        padding: 120px 5% 75px;
+    }
+
+    .oc-gallery {
+        padding: 80px 5% 100px;
+    }
+
+    .oc-gallery-heading {
+        gap: 30px;
+    }
+
+    .oc-gallery-grid {
+        gap: 18px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .oc-page-hero {
+        padding: 105px 5% 65px;
+    }
+
+    .oc-page-hero h1 {
+        font-size: 48px;
+    }
+
+    .oc-page-hero p {
+        font-size: 11px;
+    }
+
+
+    .oc-gallery {
+        padding: 70px 5% 80px;
+    }
+
+    .oc-gallery-heading {
+        display: block;
+
+        margin-bottom: 40px;
+    }
+
+    .oc-gallery-heading h2 {
+        font-size: 32px;
+    }
+
+    .oc-gallery-heading > p {
+        max-width: 100%;
+        margin-top: 20px;
+
+        font-size: 11px;
+    }
+
+
+    .oc-gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    .oc-gallery-image {
+        aspect-ratio: 4 / 3;
+    }
+
+
+    .oc-gallery-caption {
+        min-height: 65px;
+        padding: 13px 15px;
+    }
+
+    .oc-gallery-caption strong {
+        font-size: 9px;
+    }
+
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 400px) {
+
+    .oc-page-hero h1 {
+        font-size: 41px;
+    }
+
+    .oc-gallery-heading h2 {
+        font-size: 28px;
+    }
+
+}
