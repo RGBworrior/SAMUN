@@ -7559,3 +7559,84 @@ footer{
     font-size:13px;
     line-height:1.8;
 }
+
+
+/* PAYMENT PORTAL */
+.payment-option{
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(199,166,90,.45);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(127,29,45,.22),
+            rgba(8,8,8,.96) 72%
+        );
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+.payment-option::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:80px;
+    height:2px;
+    background:var(--gold);
+    transition:width .35s ease;
+}
+
+.payment-option:hover{
+    transform:translateY(-5px);
+    border-color:var(--gold);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(127,29,45,.32),
+            rgba(8,8,8,.98) 75%
+        );
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.35),
+        0 0 25px rgba(199,166,90,.08);
+}
+
+.payment-option:hover::before{
+    width:150px;
+}
+
+.register-option-icon{
+    width:44px;
+    height:44px;
+    flex:0 0 44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(199,166,90,.35);
+    color:var(--gold);
+    font-family:"Cinzel",serif;
+    font-size:20px;
+    border-radius:50%;
+    background:rgba(199,166,90,.04);
+}
+
+.payment-option .register-content strong{
+    color:var(--gold-light);
+}
+
+.payment-option .register-content small{
+    color:#9f988e;
+}
+
+.payment-option .register-arrow{
+    color:var(--gold);
+    font-size:20px;
+    transition:transform .3s ease;
+}
+
+.payment-option:hover .register-arrow{
+    transform:translateX(6px);
+}
