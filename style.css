@@ -7561,51 +7561,28 @@ footer{
 }
 
 
-/* PAYMENT PORTAL */
+/* PAYMENT PORTAL — GALLERY STYLE */
 .payment-option{
     position:relative;
     overflow:hidden;
-    border:1px solid rgba(199,166,90,.45);
-    background:
-        linear-gradient(
-            135deg,
-            rgba(127,29,45,.22),
-            rgba(8,8,8,.96) 72%
-        );
+    border:1px solid rgba(199,166,90,.38);
+    background:transparent;
     transition:
         transform .3s ease,
         border-color .3s ease,
-        background .3s ease,
-        box-shadow .3s ease;
+        color .3s ease,
+        background .3s ease;
 }
 
 .payment-option::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:80px;
-    height:2px;
-    background:var(--gold);
-    transition:width .35s ease;
+    display:none;
 }
 
 .payment-option:hover{
-    transform:translateY(-5px);
+    transform:translateY(-4px);
     border-color:var(--gold);
-    background:
-        linear-gradient(
-            135deg,
-            rgba(127,29,45,.32),
-            rgba(8,8,8,.98) 75%
-        );
-    box-shadow:
-        0 15px 35px rgba(0,0,0,.35),
-        0 0 25px rgba(199,166,90,.08);
-}
-
-.payment-option:hover::before{
-    width:150px;
+    background:rgba(199,166,90,.06);
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
 .register-option-icon{
@@ -7615,20 +7592,20 @@ footer{
     display:flex;
     align-items:center;
     justify-content:center;
-    border:1px solid rgba(199,166,90,.35);
+    border:1px solid rgba(199,166,90,.3);
+    border-radius:50%;
+    background:transparent;
     color:var(--gold);
     font-family:"Cinzel",serif;
-    font-size:20px;
-    border-radius:50%;
-    background:rgba(199,166,90,.04);
+    font-size:18px;
 }
 
 .payment-option .register-content strong{
-    color:var(--gold-light);
+    color:var(--ivory);
 }
 
 .payment-option .register-content small{
-    color:#9f988e;
+    color:#8f8980;
 }
 
 .payment-option .register-arrow{
@@ -7639,4 +7616,8 @@ footer{
 
 .payment-option:hover .register-arrow{
     transform:translateX(6px);
+}
+
+.payment-option:hover .register-option-icon{
+    border-color:var(--gold);
 }
