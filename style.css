@@ -7560,64 +7560,49 @@ footer{
     line-height:1.8;
 }
 
-
 /* PAYMENT PORTAL — GALLERY STYLE */
-.payment-option{
-    position:relative;
-    overflow:hidden;
-    border:1px solid rgba(199,166,90,.38);
-    background:transparent;
-    transition:
-        transform .3s ease,
-        border-color .3s ease,
-        color .3s ease,
-        background .3s ease;
-}
-
-.payment-option::before{
-    display:none;
-}
-
-.payment-option:hover{
-    transform:translateY(-4px);
-    border-color:var(--gold);
-    background:rgba(199,166,90,.06);
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
-}
-
-.register-option-icon{
-    width:44px;
-    height:44px;
-    flex:0 0 44px;
+.payment-portal-btn{
+    width:100%;
+    min-height:70px;
+    box-sizing:border-box;
     display:flex;
     align-items:center;
     justify-content:center;
-    border:1px solid rgba(199,166,90,.3);
-    border-radius:50%;
+    gap:18px;
+    padding:18px 24px;
+    border:1px solid rgba(199,166,90,.45);
+    border-radius:5px;
     background:transparent;
     color:var(--gold);
-    font-family:"Cinzel",serif;
-    font-size:18px;
+    font-family:"Inter",sans-serif;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-decoration:none;
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
 }
 
-.payment-option .register-content strong{
-    color:var(--ivory);
-}
-
-.payment-option .register-content small{
-    color:#8f8980;
-}
-
-.payment-option .register-arrow{
+.payment-portal-btn strong{
     color:var(--gold);
-    font-size:20px;
+    font-size:25px;
+    font-weight:400;
+    line-height:1;
     transition:transform .3s ease;
 }
 
-.payment-option:hover .register-arrow{
-    transform:translateX(6px);
+.payment-portal-btn:hover{
+    background:rgba(199,166,90,.06);
+    border-color:var(--gold);
+    color:var(--gold-light);
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
-.payment-option:hover .register-option-icon{
-    border-color:var(--gold);
+.payment-portal-btn:hover strong{
+    transform:translate(4px,-3px);
 }
